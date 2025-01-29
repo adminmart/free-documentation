@@ -1,9 +1,30 @@
+.premium-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  .hover-link {
+    opacity: 0.8;
+    &:hover {
+     opacity: 1;
+    }
+  }
+}
+
+
+
 .docs {
   &#main-wrapper {
     display: flex;
     align-items: stretch;
     font-size: 16px;
+    margin-top: 73px;
   }
+
+  
+
+  
   .left-sidebar {
     width: 270px;
     flex-shrink: 0;
@@ -121,6 +142,8 @@
       padding: 15px;
     }
   }
+
+ 
 
   .card {
     border: 1px solid $border-color;
