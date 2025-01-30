@@ -284,8 +284,7 @@
                       <li class="sidebar-item mb-0">
                         <a href="docs-color.html" class="nav-link sub-link"
                           ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Color </span>
-                          <span class="badge bg-secondary f-s-12">PRO</span></a
+                          <span class="hide-menu"> Color </span></a
                         >
                       </li>
                       <li class="sidebar-item mb-0">
@@ -456,8 +455,7 @@
                         <li class="sidebar-item mb-0">
                           <a href="docs-color.html" class="nav-link sub-link"
                             ><i class="ti ti-point me-3"></i>
-                            <span class="hide-menu"> Color </span>
-                            <span class="badge bg-secondary f-s-12">PRO</span></a
+                            <span class="hide-menu"> Color </span></a
                           >
                         </li>
                         <li class="sidebar-item mb-0">
@@ -604,17 +602,45 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <h4 class="mb-4 pb-2">Color</h4>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
-                <h5 class="card-subtitle mt-2 text-muted mb-4">
-                  For any change in colors :
-                  <span class="text-dark font-medium"
-                    >src/assets/scss/themecolors/_blue_theme.scss</span
-                  >
-                </h5>
-                <pre>
-                    <code class="language-js py-0">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  href="#home"
+                  role="tab"
+                >
+                  <span>Free Version</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                >
+                  <span>Premium Version</span>
+                </a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane " id="profile" role="tabpanel">
+                <div class="p-3 border border-top-0 rounded-bottom">
+                  <div class="p-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          For any change in colors :
+                          <span class="text-dark font-medium"
+                            >src/assets/scss/themecolors/_blue_theme.scss</span
+                          >
+                        </h5>
+                        <pre>
+                            <code class="language-js py-0">
 @use "sass:map";
 @use "@angular/material" as mat;
 
@@ -623,25 +649,24 @@ html.blue_theme {
   --mat-sys-primary-fixed-dim: rgb(93, 135, 255, 0.15);
   --mat-sys-secondary: rgb(68, 183, 247);
   --mat-sys-secondary-fixed-dim: rgb(68, 183, 247, 0.15);
-}
-                      
-                            </code>
-                        </pre>
-              </div>
-            </div>
-
-
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">Light Theme Variables Settings</h4>
-                <h5 class="card-subtitle mt-2 text-muted mb-4">
-                  For any change in colors :
-                  <span class="text-dark font-medium"
-                    >src/assets/scss/theme-variables/_light-theme-variables.scss</span
-                  >
-                </h5>
-                <pre>
-                    <code class="language-js py-0">
+}                        
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+        
+        
+                    <div class="mt-4 card">
+                      <div class="card-body">
+                        <h4 class="card-title">Light Theme Variables Settings</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          For any change in colors :
+                          <span class="text-dark font-medium"
+                            >src/assets/scss/theme-variables/_light-theme-variables.scss</span
+                          >
+                        </h5>
+                        <pre>
+                            <code class="language-js py-0">
 html.light-theme {
   color-scheme: light;
   --mat-sys-corner-small: 7px;
@@ -665,66 +690,102 @@ html.light-theme {
   --mdc-dialog-supporting-text-color: var(--mat-sys-on-background);
   --mat-expansion-header-hover-state-layer-color: #f6f9fc;
 }
-                      
-                            </code>
-                        </pre>
-              </div>
-            </div>
-
-
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">Dark Theme Variables Settings</h4>
-                <h5 class="card-subtitle mt-2 text-muted mb-4">
-                  For any change in colors :
-                  <span class="text-dark font-medium"
-                    >src/assets/scss/theme-variables/_dark-theme-variables.scss</span
-                  >
-                </h5>
-                <pre>
-                    <code class="language-js py-0">
+                              
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+        
+        
+                    <div class="mt-4 card">
+                      <div class="card-body">
+                        <h4 class="card-title">Dark Theme Variables Settings</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          For any change in colors :
+                          <span class="text-dark font-medium"
+                            >src/assets/scss/theme-variables/_dark-theme-variables.scss</span
+                          >
+                        </h5>
+                        <pre>
+                            <code class="language-js py-0">
 html.dark-theme {
-  color-scheme: dark;
-  --mat-sys-background: #141a21;
-  --mat-sys-on-background: rgba(255, 255, 255, 0.9);
-  --mat-sys-on-primary: #fff;
-  --mat-sys-surface-bright: #ffffff05;
-  --mat-sys-surface: #141a21;
-  --mat-sys-surface-container: #141a21;
-  --mat-sys-surface-container-low: #141a21;
-  --mat-sys-outline-variant: #2e3f50;
-  --mat-sys-outline: #2e3f50;
-  --mdc-outlined-text-field-hover-outline-color: #465670;
-  --mdc-checkbox-unselected-hover-state-layer-color: #19212a;
-  --mat-menu-item-hover-state-layer-color: #19212a;
-  --mat-standard-button-toggle-state-layer-color: #19212a;
-  --mat-option-focus-state-layer-color: #19212a;
-  --mat-option-hover-state-layer-color: #19212a;
-  --mdc-switch-unselected-track-color: #19212a;
-  --mat-stepper-header-focus-state-layer-color: #19212a;
-  --mat-stepper-header-hover-state-layer-color: #19212a;
-  --mat-expansion-header-hover-state-layer-color: #19212a;
-  @include mat.card-overrides(
-    (
-      elevated-container-color: #1c252e,
-      elevated-container-elevation: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
-      subtitle-text-color: rgba(255, 255, 255, 0.67),
-    )
-  );
-  @include mat.theme-overrides(
-    (
-      level1: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-      level2: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-      level3: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
-    )
-  );
-}
-                      
-                      
-                            </code>
-                        </pre>
+color-scheme: dark;
+--mat-sys-background: #141a21;
+--mat-sys-on-background: rgba(255, 255, 255, 0.9);
+--mat-sys-on-primary: #fff;
+--mat-sys-surface-bright: #ffffff05;
+--mat-sys-surface: #141a21;
+--mat-sys-surface-container: #141a21;
+--mat-sys-surface-container-low: #141a21;
+--mat-sys-outline-variant: #2e3f50;
+--mat-sys-outline: #2e3f50;
+--mdc-outlined-text-field-hover-outline-color: #465670;
+--mdc-checkbox-unselected-hover-state-layer-color: #19212a;
+--mat-menu-item-hover-state-layer-color: #19212a;
+--mat-standard-button-toggle-state-layer-color: #19212a;
+--mat-option-focus-state-layer-color: #19212a;
+--mat-option-hover-state-layer-color: #19212a;
+--mdc-switch-unselected-track-color: #19212a;
+--mat-stepper-header-focus-state-layer-color: #19212a;
+--mat-stepper-header-hover-state-layer-color: #19212a;
+--mat-expansion-header-hover-state-layer-color: #19212a;
+@include mat.card-overrides(
+  (
+    elevated-container-color: #1c252e,
+    elevated-container-elevation: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px,
+    subtitle-text-color: rgba(255, 255, 255, 0.67),
+  )
+);
+@include mat.theme-overrides(
+  (
+    level1: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+    level2: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+    level3: 0px 12px 24px -4px rgba(143, 176, 210, 0.02),
+  )
+);
+}                     
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane active" id="home" role="tabpanel">
+                <div class="p-3 border border-top-0 rounded-bottom">
+                  <div class="p-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          For any change in colors :
+                          <span class="text-dark font-medium"
+                            >src/assets/scss/themecolors/_blue_theme.scss</span
+                          >
+                        </h5>
+                        <pre>
+                            <code class="language-js py-0">
+@use "sass:map";
+@use "@angular/material" as mat;
+
+html.blue_theme {
+  --mat-sys-primary: rgb(93, 135, 255);
+  --mat-sys-primary-fixed-dim: rgb(93, 135, 255, 0.15);
+  --mat-sys-secondary: rgb(68, 183, 247);
+  --mat-sys-secondary-fixed-dim: rgb(68, 183, 247, 0.15);
+}                        
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+        
+        
+                  </div>
+                </div>
               </div>
             </div>
+
+            
             <!-- ============================================================== -->
             <!-- End Of Page Content -->
             <!-- ============================================================== -->
