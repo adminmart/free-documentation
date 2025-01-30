@@ -12,6 +12,11 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .premium-header {
+    top: 60px;
+  }
+} 
 
 
 .docs {
@@ -177,7 +182,7 @@
 @include media-breakpoint-down(sm) {
   .docs {
     .page-wrapper .container-fluid {
-      padding-top: 30px;
+      padding-top: 115px;
     }
   }
 }

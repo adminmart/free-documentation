@@ -12949,6 +12949,11 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+@media (max-width: 991.98px) {
+  .premium-header {
+    top: 60px;
+  }
+}
 .docs#main-wrapper {
   display: flex;
   align-items: stretch;
@@ -13086,6 +13091,6 @@ textarea.form-control-lg {
 }
 @media (max-width: 575.98px) {
   .docs .page-wrapper .container-fluid, .docs .page-wrapper .container-sm, .docs .page-wrapper .container-md, .docs .page-wrapper .container-lg, .docs .page-wrapper .container-xl, .docs .page-wrapper .container-xxl {
-    padding-top: 30px;
+    padding-top: 115px;
   }
 }
