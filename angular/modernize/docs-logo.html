@@ -260,6 +260,13 @@
                       Start</a
                     >
                   </li>
+                  <li class="sidebar-item">
+                    <a
+                      class="nav-link sidebar-link d-flex align-items-center"
+                      href="docs-licenses.html"
+                      ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
+                    >
+                  </li>
                   <!--Theme UI-->
                   <li class="nav-small-cap mt-4">
                     <span class="hide-menu">THEME UI</span>
@@ -273,7 +280,6 @@
                       <span class="hide-menu"
                         ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
                         Config
-                        <span class="badge bg-secondary f-s-12">PRO</span>
                       </span>
                     </a>
                     <!--sub-menu items-->
@@ -290,15 +296,13 @@
                       <li class="sidebar-item mb-0">
                         <a href="docs-typography.html" class="nav-link sub-link"
                           ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Typography </span>
-                          <span class="badge bg-secondary f-s-12">PRO</span></a
+                          <span class="hide-menu"> Typography </span></a
                         >
                       </li>
                       <li class="sidebar-item mb-0">
                         <a href="docs-icon.html" class="nav-link sub-link"
                           ><i class="ti ti-point me-3"></i>
-                          <span class="hide-menu"> Icons </span>
-                          <span class="badge bg-secondary f-s-12">PRO</span></a
+                          <span class="hide-menu"> Icons </span></a
                         >
                       </li>
                     </ul>
@@ -327,8 +331,7 @@
                     <a
                       class="nav-link sidebar-link d-flex align-items-center"
                       href="docs-routing.html"
-                      ><i class="ti ti-route me-3 fs-4"></i> Routing
-                      <span class="badge bg-secondary f-s-12">PRO</span></a
+                      ><i class="ti ti-route me-3 fs-4"></i> Routing</a
                     >
                   </li>
                   <li class="sidebar-item">
@@ -431,6 +434,13 @@
                         Start</a
                       >
                     </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="nav-link sidebar-link d-flex align-items-center"
+                        href="docs-licenses.html"
+                        ><i class="ti ti-license me-3 fs-4"></i> Licenses</a
+                      >
+                    </li>
                     <!--Theme UI-->
                     <li class="nav-small-cap mt-4">
                       <span class="hide-menu">THEME UI</span>
@@ -444,7 +454,6 @@
                         <span class="hide-menu"
                           ><i class="ti ti-file-infinity me-3 fs-4"></i>Project
                           Config
-                          <span class="badge bg-secondary f-s-12">PRO</span>
                         </span>
                       </a>
                       <!--sub-menu items-->
@@ -461,15 +470,13 @@
                         <li class="sidebar-item mb-0">
                           <a href="docs-typography.html" class="nav-link sub-link"
                             ><i class="ti ti-point me-3"></i>
-                            <span class="hide-menu"> Typography </span>
-                            <span class="badge bg-secondary f-s-12">PRO</span></a
+                            <span class="hide-menu"> Typography </span></a
                           >
                         </li>
                         <li class="sidebar-item mb-0">
                           <a href="docs-icon.html" class="nav-link sub-link"
                             ><i class="ti ti-point me-3"></i>
-                            <span class="hide-menu"> Icons </span>
-                            <span class="badge bg-secondary f-s-12">PRO</span></a
+                            <span class="hide-menu"> Icons </span></a
                           >
                         </li>
                       </ul>
@@ -499,7 +506,7 @@
                         class="nav-link sidebar-link d-flex align-items-center"
                         href="docs-routing.html"
                         ><i class="ti ti-route me-3 fs-4"></i> Routing
-                        <span class="badge bg-secondary f-s-12">PRO</span></a
+                        </a
                       >
                     </li>
                     <li class="sidebar-item">
@@ -602,20 +609,48 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <h4 class="mb-4 pb-2">Change Logo</h4>
-            <div class="mt-4 card">
-              <div class="card-body">
-                <h4 class="card-title">Change Logo</h4>
-                <h5 class="card-subtitle mt-2 text-muted mb-4">
-                  To change logo : 
-                  <span class="text-dark font-medium"
-                    >src/app/layouts/full/vertical/sidebar/branding.component.ts</span
-                  >
-                </h5>
-                <div class="border-2 border-start border-primary bg-light rounded p-3">
-                    Put the logo image into the assets/images/logos folder.
-                </div>
-                <pre>
-                    <code class="language-js py-0">
+
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  href="#home"
+                  role="tab"
+                >
+                  <span>Free Version</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                >
+                  <span>Premium Version</span>
+                </a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane " id="profile" role="tabpanel">
+                <div class="p-3 border border-top-0 rounded-bottom">
+                  <div class="p-3">
+                    <div class="mt-4 card">
+                      <div class="card-body">
+                        <h4 class="card-title">Change Logo</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          To change logo : 
+                          <span class="text-dark font-medium"
+                            >src/app/layouts/full/vertical/sidebar/branding.component.ts</span
+                          >
+                        </h5>
+                        <div class="border-2 border-start border-primary bg-light rounded p-3">
+                            Put the logo image into the assets/images/logos folder.
+                        </div>
+                        <pre>
+                            <code class="language-js py-0">
 import { Component } from '@angular/core';
 import { CoreService } from 'src/app/services/core.service';
 
@@ -644,12 +679,67 @@ export class BrandingComponent {
   options = this.settings.getOptions();
   constructor(private settings: CoreService) {}
 }
-                      
-                      
-                            </code>
-                        </pre>
+                              
+                              
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane active" id="home" role="tabpanel">
+                <div class="p-3 border border-top-0 rounded-bottom">
+                  <div class="p-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Change Logo</h4>
+                        <h5 class="card-subtitle mt-2 text-muted mb-4">
+                          To change logo : 
+                          <span class="text-dark font-medium"
+                            >src/app/layouts/full/sidebar/branding.component.ts</span
+                          >
+                        </h5>
+                        <div class="border-2 border-start border-primary bg-light rounded p-3">
+                            Put the logo image into the assets/images/logos folder.
+                        </div>
+                        <pre>
+                            <code class="language-js py-0">
+import { Component } from '@angular/core';
+import { CoreService } from 'src/app/services/core.service';
+
+@Component({
+selector: 'app-branding',
+imports: [],
+template: `
+  &lt;a href=&quot;/&quot; class=&quot;logodark&quot;&gt;
+    &lt;img
+      src=&quot;./assets/images/logos/dark-logo.svg&quot;
+      class=&quot;align-middle m-2&quot;
+      alt=&quot;logo&quot;
+    /&gt;
+  &lt;/a&gt;
+`,
+})
+export class BrandingComponent {
+options = this.settings.getOptions();
+constructor(private settings: CoreService) {}
+}
+                              
+                              
+                              
+                                    </code>
+                                </pre>
+                      </div>
+                    </div>
+        
+        
+                  </div>
+                </div>
               </div>
             </div>
+
+            
 
 
             <!-- ============================================================== -->
