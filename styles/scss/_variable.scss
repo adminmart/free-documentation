@@ -142,4 +142,8 @@ html {
     --bs-dropdown-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
     --bs-dropdown-border-width: 0;
   }
+
+  .nav-pills {
+    --bs-nav-pills-link-active-bg : #11142d; 
+  }
 }

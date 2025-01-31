@@ -31,6 +31,9 @@ html .dropdown-menu {
   --bs-dropdown-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
   --bs-dropdown-border-width: 0;
 }
+html .nav-pills {
+  --bs-nav-pills-link-active-bg: #11142d;
+}
 
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
@@ -13038,22 +13041,22 @@ textarea.form-control-lg {
   color: #fff;
 }
 .docs .left-sidebar #sidebarnav .sidebar-item .nav-link:hover {
-  background-color: #ecf2ff;
-  color: #5d87ff;
+  background-color: rgba(17, 20, 45, 0.1);
+  color: #11142d;
 }
 .docs .left-sidebar #sidebarnav .sidebar-item .nav-link:hover.has-arrow::after {
-  border-color: #5d87ff;
+  border-color: #11142d;
 }
 .docs .left-sidebar #sidebarnav .sidebar-item .nav-link:hover.has-arrow.active::after {
-  border-color: #5d87ff;
+  border-color: #11142d;
 }
 .docs .left-sidebar #sidebarnav .sidebar-item .sub-link:hover {
   background-color: transparent;
-  color: #5d87ff;
+  color: #11142d;
 }
 .docs .left-sidebar #sidebarnav .sidebar-item .sub-link.active {
   background-color: transparent;
-  color: #5d87ff;
+  color: #11142d;
 }
 .docs .page-wrapper {
   margin-left: 270px;
