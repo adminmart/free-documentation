@@ -12,7 +12,7 @@
     content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/modernize-free-angular-material-template/" />
+  <link rel="canonical" href="https://adminmart.com/product/modernize-free-nextjs-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/modernize/favicon.png" />
   <!-- This page css -->
@@ -21,12 +21,14 @@
   <link href="../../styles/dist/css/style.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" type="text/css" href="../../styles/assets/highlights/atom-one-dark.min.css" />
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
@@ -427,124 +429,42 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Authentication</h4>
+          <h4 class="mb-4 pb-2">Icons</h4>
           <div class="mt-4 card">
             <div class="card-body">
-              <h4 class="card-title mb-4">Authguard</h4>
-              <h5 class="font-weight-normal text-muted lh-base">Auth guard provide lifecycle event called canActivate.
-                The canActivate is like a constructor. It will be called before accessing the routes. The canActivate
-                has to return true to access the page. If it returns false, we can not access the page. We can write our
-                user authorization and authentication logic inside the canActivate function.</h5>
-              <pre>
-                      <code>
-// -----------------------------------------------------------------------------------------
-// File : src/app/login.service.ts
-// -----------------------------------------------------------------------------------------
+              <h4 class="card-title">1. Tabler Icons</h4>
+              <a href="https://tabler-icons.io/" class="font-16">https://tabler-icons.io/</a>
+              <pre>                        <code class="language-js py-0 hljs javascript">
+<span class="hljs-keyword"><span class="hljs-keyword">import</span></span> { IconGridDots,IconAward,IconCalendar,IconMail } <span class="hljs-keyword"><span class="hljs-keyword">from</span></span> <span class="hljs-string"><span class="hljs-string">'@tabler/icons-react'</span></span>;
 
-import { Injectable } from '@angular/core';
+<span class="hljs-comment"><span class="hljs-comment">// ----------------------------------------------------------------------</span></span>
 
-@Injectable()
-export class LoginService {
-  constructor() {}
-
-  checkusernameandpassword(uname: string, pwd: string) {
-    if (uname === 'admin' && pwd === 'admin123') {
-      localStorage.setItem('username', 'admin');
-      return true;
-    } else {
-      return false;
-    }
-  }
+<span class="hljs-keyword"><span class="hljs-keyword">const</span></span> TablerIcons = <span class="hljs-function"><span class="hljs-params"><span class="hljs-function"><span class="hljs-params">()</span></span></span><span class="hljs-function"> =&gt;</span></span> {
+  <span class="hljs-keyword"><span class="hljs-keyword">return</span></span>(
+    &lt;IconGridDots width={22} /&gt;
+    &lt;IconAward width={25} /&gt;
+    &lt;IconCalendar width={30}/&gt;
+    &lt;IconMail width={40}/&gt;
+  );
 }
-
-
-// -----------------------------------------------------------------------------------------
-// File : src/app/auth.guard.ts
-// -----------------------------------------------------------------------------------------
-import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router,
-} from '@angular/router';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthGuard implements CanActivate {
-  constructor(private routes: Router) {}
-
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
-    if (localStorage.getItem('username') != null) {
-      return true;
-    } else {
-      this.routes.navigate(['/authentication/side-login']);
-      return false;
-    }
-  }
-}
-
-// -----------------------------------------------------------------------------------------
-// File : src/app/app-routing.module.ts
-// -----------------------------------------------------------------------------------------
-import { AuthGuard } from './auth.guard';
-const routes: Routes = [
-  {
-    path: '',
-    component: FullComponent,
-    canActivate: [AuthGuard],
-    children: [
-      {
-        path: '',
-        redirectTo: '/starter',
-        pathMatch: 'full',
-      },
-      {
-        path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
-      },
-    ],
-  },
-];
-
                       </code>
-                    </pre>
+                  </pre>
             </div>
           </div>
           <!-- ============================================================== -->
-          <!-- End Page wrapper  -->
+          <!-- End Of Page Content -->
           <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Of Page Content -->
-        <!-- ============================================================== -->
 
+        </div>
       </div>
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
-    <!-- End Container fluid  -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <!-- <footer class="footer bg-white text-center">
-          All Rights Reserved by Modernize. Designed and Developed by
-          <a href="https://www.Adminmart.com">Adminmart.com</a>
-        </footer> -->
-
-    <!-- ============================================================== -->
-    <!-- End footer -->
-    <!-- ============================================================== -->
-  </div>
-  <!-- ============================================================== -->
-  <!-- End Page wrapper  -->
-  <!-- ============================================================== -->
   </div>
   <!-- ============================================================== -->
   <!-- End Wrapper -->
@@ -563,10 +483,6 @@ const routes: Routes = [
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
-
-    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-      target: "#navbar-example3",
-    });
   </script>
   <!-- End JS -->
 </body>

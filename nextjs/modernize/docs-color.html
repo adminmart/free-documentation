@@ -12,7 +12,7 @@
     content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/modernize-free-angular-material-template/" />
+  <link rel="canonical" href="https://adminmart.com/product/modernize-free-nextjs-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/modernize/favicon.png" />
   <!-- This page css -->
@@ -411,6 +411,11 @@
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -427,124 +432,188 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Authentication</h4>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title mb-4">Authguard</h4>
-              <h5 class="font-weight-normal text-muted lh-base">Auth guard provide lifecycle event called canActivate.
-                The canActivate is like a constructor. It will be called before accessing the routes. The canActivate
-                has to return true to access the page. If it returns false, we can not access the page. We can write our
-                user authorization and authentication logic inside the canActivate function.</h5>
-              <pre>
-                      <code>
-// -----------------------------------------------------------------------------------------
-// File : src/app/login.service.ts
-// -----------------------------------------------------------------------------------------
+          <h4 class="mb-4 pb-2">Color</h4>
 
-import { Injectable } from '@angular/core';
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
+                <span>Free Version</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
+                <span>Premium Version</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane " id="profile" role="tabpanel">
+              <div class="p-3 border border-top-0 rounded-bottom">
+                <div class="p-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">1. Override Colors</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For any change in colors :
+                        <span class="text-dark font-medium">/src/utils/theme/DefaultColors.tsx</span>
+                      </h5>
+                      <pre>                            <code class="language-js py-0 hljs javascript">
+primary: {
+  <span class="hljs-attr">main</span>: <span class="hljs-string">'#5D87FF'</span>,
+  <span class="hljs-attr">light</span>: <span class="hljs-string">'#ECF2FF'</span>,
+  <span class="hljs-attr">dark</span>: <span class="hljs-string">'#4570EA'</span>,
+},
+<span class="hljs-attr">secondary</span>: {
+  <span class="hljs-attr">main</span>: <span class="hljs-string">'#49BEFF'</span>,
+  <span class="hljs-attr">light</span>: <span class="hljs-string">'#E8F7FF'</span>,
+  <span class="hljs-attr">dark</span>: <span class="hljs-string">'#23afdb'</span>,
+},
+<span class="hljs-attr">success</span>: {
+  <span class="hljs-attr">main</span>: <span class="hljs-string">'#13DEB9'</span>,
+  <span class="hljs-attr">light</span>: <span class="hljs-string">'#E6FFFA'</span>,
+  <span class="hljs-attr">dark</span>: <span class="hljs-string">'#02b3a9'</span>,
+  <span class="hljs-attr">contrastText</span>: <span class="hljs-string">'#ffffff'</span>,
+},
+                                  </code>
+                              </pre>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary mt-4">
+                    To change primary and secondary color you have to change in 2
+                    files, which is explain below:
+                  </div>
+                  <div class="card mt-4">
+                    <div class="card-body">
+                      <h4 class="card-title">2. Override Light Theme Colors</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For change , go to :
+                        <span class="text-dark font-medium">src/utils/theme/LightThemeColors.tsx</span>
+                      </h5>
 
-@Injectable()
-export class LoginService {
-  constructor() {}
-
-  checkusernameandpassword(uname: string, pwd: string) {
-    if (uname === 'admin' && pwd === 'admin123') {
-      localStorage.setItem('username', 'admin');
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
-
-
-// -----------------------------------------------------------------------------------------
-// File : src/app/auth.guard.ts
-// -----------------------------------------------------------------------------------------
-import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router,
-} from '@angular/router';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthGuard implements CanActivate {
-  constructor(private routes: Router) {}
-
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
-    if (localStorage.getItem('username') != null) {
-      return true;
-    } else {
-      this.routes.navigate(['/authentication/side-login']);
-      return false;
-    }
-  }
-}
-
-// -----------------------------------------------------------------------------------------
-// File : src/app/app-routing.module.ts
-// -----------------------------------------------------------------------------------------
-import { AuthGuard } from './auth.guard';
-const routes: Routes = [
-  {
-    path: '',
-    component: FullComponent,
-    canActivate: [AuthGuard],
-    children: [
-      {
-        path: '',
-        redirectTo: '/starter',
-        pathMatch: 'full',
-      },
-      {
-        path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
-      },
-    ],
+                      <pre>                            <code class="language-js py-0 hljs javascript">
+{
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'BLUE_THEME'</span>,
+  <span class="hljs-attr">palette</span>: {
+    <span class="hljs-attr">primary</span>: {
+      <span class="hljs-attr">main</span>: <span class="hljs-string">'#5D87FF'</span>,
+      <span class="hljs-attr">light</span>: <span class="hljs-string">'#ECF2FF'</span>,
+      <span class="hljs-attr">dark</span>: <span class="hljs-string">'#4570EA'</span>,
+      <span class="hljs-attr">contrastText</span>: <span class="hljs-string">'#ffffff'</span>,
+    },
+    <span class="hljs-attr">secondary</span>: {
+      <span class="hljs-attr">main</span>: <span class="hljs-string">'#49BEFF'</span>,
+      <span class="hljs-attr">light</span>: <span class="hljs-string">'#E8F7FF'</span>,
+      <span class="hljs-attr">dark</span>: <span class="hljs-string">'#23afdb'</span>,
+      <span class="hljs-attr">contrastText</span>: <span class="hljs-string">'#ffffff'</span>,
+    },
   },
-];
+},
+                                  </code>
+                              </pre>
+                    </div>
+                  </div>
+                  <div class="card mt-4">
+                    <div class="card-body">
+                      <h4 class="card-title">3. Override Dark Theme Colors</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For change , go to :
+                        <span class="text-dark font-medium">src/utils/theme/DarkThemeColors.tsx</span>
+                      </h5>
 
-                      </code>
-                    </pre>
+                      <pre>                            <code class="language-js py-0 hljs javascript">
+{
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'BLUE_THEME'</span>,
+  <span class="hljs-attr">palette</span>: {
+    <span class="hljs-attr">primary</span>: {
+      <span class="hljs-attr">main</span>: <span class="hljs-string">'#5D87FF'</span>,
+      <span class="hljs-attr">light</span>: <span class="hljs-string">'#253662'</span>,
+      <span class="hljs-attr">dark</span>: <span class="hljs-string">'#4570EA'</span>,
+      <span class="hljs-attr">contrastText</span>: <span class="hljs-string">'#ffffff'</span>,
+    },
+    <span class="hljs-attr">secondary</span>: {
+      <span class="hljs-attr">main</span>: <span class="hljs-string">'#49BEFF'</span>,
+      <span class="hljs-attr">light</span>: <span class="hljs-string">'#1C455D'</span>,
+      <span class="hljs-attr">dark</span>: <span class="hljs-string">'#23afdb'</span>,
+      <span class="hljs-attr">contrastText</span>: <span class="hljs-string">'#ffffff'</span>,
+    },
+    <span class="hljs-attr">background</span>: {
+      <span class="hljs-attr">default</span>: <span class="hljs-string">'#2A3447'</span>,
+      <span class="hljs-attr">dark</span>: <span class="hljs-string">'#2A3547'</span>,
+      <span class="hljs-attr">paper</span>: <span class="hljs-string">'#2A3447'</span>,
+    },
+  },
+},
+                                  </code>
+                              </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane active" id="home" role="tabpanel">
+              <div class="p-3 border border-top-0 rounded-bottom">
+                <div class="p-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For any change in colors :
+                        <span class="text-dark font-medium">package/src/utils/theme/DefaultColors.tsx</span>
+                      </h5>
+                      <pre>
+                            <code class="language-js py-0">
+primary: {
+  main: "#5D87FF",
+  light: "#ECF2FF",
+  dark: "#4570EA",
+},
+secondary: {
+  main: "#49BEFF",
+  light: "#E8F7FF",
+  dark: "#23afdb",
+},
+success: {
+  main: "#13DEB9",
+  light: "#E6FFFA",
+  dark: "#02b3a9",
+  contrastText: "#ffffff",
+},                        
+                                    </code>
+                                </pre>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
             </div>
           </div>
+
+
           <!-- ============================================================== -->
-          <!-- End Page wrapper  -->
+          <!-- End Of Page Content -->
           <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Of Page Content -->
-        <!-- ============================================================== -->
-
       </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <!-- <footer class="footer bg-white text-center">
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <!-- <footer class="footer bg-white text-center">
           All Rights Reserved by Modernize. Designed and Developed by
           <a href="https://www.Adminmart.com">Adminmart.com</a>
         </footer> -->
 
+      <!-- ============================================================== -->
+      <!-- End footer -->
+      <!-- ============================================================== -->
+    </div>
     <!-- ============================================================== -->
-    <!-- End footer -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-  </div>
-  <!-- ============================================================== -->
-  <!-- End Page wrapper  -->
-  <!-- ============================================================== -->
   </div>
   <!-- ============================================================== -->
   <!-- End Wrapper -->

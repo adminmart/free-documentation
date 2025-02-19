@@ -12,7 +12,7 @@
     content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/modernize-free-angular-material-template/" />
+  <link rel="canonical" href="https://adminmart.com/product/modernize-free-nextjs-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/modernize/favicon.png" />
   <!-- This page css -->
@@ -411,6 +411,11 @@
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -427,124 +432,183 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Authentication</h4>
-          <div class="mt-4 card">
-            <div class="card-body">
-              <h4 class="card-title mb-4">Authguard</h4>
-              <h5 class="font-weight-normal text-muted lh-base">Auth guard provide lifecycle event called canActivate.
-                The canActivate is like a constructor. It will be called before accessing the routes. The canActivate
-                has to return true to access the page. If it returns false, we can not access the page. We can write our
-                user authorization and authentication logic inside the canActivate function.</h5>
-              <pre>
-                      <code>
-// -----------------------------------------------------------------------------------------
-// File : src/app/login.service.ts
-// -----------------------------------------------------------------------------------------
+          <h4 class="mb-4 pb-2">Change Logo</h4>
 
-import { Injectable } from '@angular/core';
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
+                <span>Free Version</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
+                <span>Premium Version</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane " id="profile" role="tabpanel">
+              <div class="p-3 border border-top-0 rounded-bottom">
+                <div class="p-3">
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        To change logo :
+                        <span
+                          class="text-dark font-medium">/src/app/(DashboardLayout)/layout/shared/logo/Logo.tsx</span>
+                      </h5>
+                      <div class="border-2 border-start border-primary bg-light rounded p-3">
+                        Put the logo image into the /public/images/logos folder.
+                      </div>
+                      <pre>                    <code class="language-js py-0 hljs javascript">
+<span class="hljs-string">'use client'</span>
+<span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
 
-@Injectable()
-export class LoginService {
-  constructor() {}
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">"next/link"</span>;
+<span class="hljs-keyword">import</span> { styled } <span class="hljs-keyword">from</span> <span class="hljs-string">"@mui/material"</span>;
+<span class="hljs-keyword">import</span> config <span class="hljs-keyword">from</span> <span class="hljs-string">'@/app/context/config'</span>
+<span class="hljs-keyword">import</span> Image <span class="hljs-keyword">from</span> <span class="hljs-string">"next/image"</span>;
+<span class="hljs-keyword">import</span> { CustomizerContext } <span class="hljs-keyword">from</span> <span class="hljs-string">"@/app/context/customizerContext"</span>;
 
-  checkusernameandpassword(uname: string, pwd: string) {
-    if (uname === 'admin' && pwd === 'admin123') {
-      localStorage.setItem('username', 'admin');
-      return true;
-    } else {
-      return false;
-    }
+<span class="hljs-keyword">const</span> Logo = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> { isCollapse, isSidebarHover, activeDir, activeMode } = useContext(CustomizerContext);
+  <span class="hljs-keyword">const</span> TopbarHeight = config.topbarHeight;
+
+  <span class="hljs-keyword">const</span> LinkStyled = styled(Link)(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ({
+    <span class="hljs-attr">height</span>: TopbarHeight,
+    <span class="hljs-attr">width</span>: isCollapse == <span class="hljs-string">"mini-sidebar"</span> &amp;&amp; !isSidebarHover ? <span class="hljs-string">'40px'</span> : <span class="hljs-string">'180px'</span>,
+    <span class="hljs-attr">overflow</span>: <span class="hljs-string">"hidden"</span>,
+    <span class="hljs-attr">display</span>: <span class="hljs-string">"block"</span>,
+  }));
+
+  <span class="hljs-keyword">if</span> (activeDir === <span class="hljs-string">"ltr"</span>) {
+    <span class="hljs-keyword">return</span> (
+      &lt;LinkStyled href="/"&gt;
+      {activeMode === "dark" ? (
+          &lt;Image
+            src="/images/logos/logo-white.svg"
+            alt="logo"
+            height={TopbarHeight}
+            width={106}
+            priority
+          /&gt;
+      ) : (
+      &lt;Image
+      src={"/images/logos/logo-dark.svg"}
+      alt="logo"
+      height={TopbarHeight}
+      width={106}
+      priority
+      /&gt;
+      )}
+      &lt;/LinkStyled&gt;
+    );
   }
-}
+
+  return (
+    &lt;LinkStyled href="/"&gt;
+              {activeMode === "dark" ? (
+                &lt;Image
+                  src="/images/logos/rtl-logo-white.svg"
+                  alt="logo"
+                  height={TopbarHeight}
+                  width={106}
+                  priority
+                /&gt;
+              ) : (
+                &lt;Image
+                  src="/images/logos/rtl-logo-dark.svg"
+                  alt="logo"
+                  height={TopbarHeight}
+                  width={106}
+                  priority
+                /&gt;
+              )}
+            &lt;/LinkStyled&gt;
+          );
+        };
+        
+export default Logo;
+                                    </code>
+                                </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane active" id="home" role="tabpanel">
+              <div class="p-3 border border-top-0 rounded-bottom">
+                <div class="p-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        To change logo :
+                        <span
+                          class="text-dark font-medium">/src/app/(DashboardLayout)/layout/shared/logo/Logo.tsx</span>
+                      </h5>
+                      <div class="border-2 border-start border-primary bg-light rounded p-3">
+                        Put the logo image into the assets/images/logos folder.
+                      </div>
+                      <pre>
+                            <code class="language-js py-0">
+import Link from "next/link";
+import { styled } from "@mui/material";
+import Image from "next/image";
+
+const LinkStyled = styled(Link)(() =&gt; ({
+  height: "70px",
+  width: "180px",
+  overflow: "hidden",
+  display: "block",
+}));
+
+const Logo = () =&gt; {
+  return (
+    &lt;LinkStyled href=&quot;/&quot;&gt;
+      &lt;Image src=&quot;/images/logos/dark-logo.svg&quot; alt=&quot;logo&quot; height={70} width={174} priority /&gt;
+    &lt;/LinkStyled&gt;
+  );
+};
+
+export default Logo;
+                                    </code>
+                                </pre>
+                    </div>
+                  </div>
 
 
-// -----------------------------------------------------------------------------------------
-// File : src/app/auth.guard.ts
-// -----------------------------------------------------------------------------------------
-import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router,
-} from '@angular/router';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthGuard implements CanActivate {
-  constructor(private routes: Router) {}
-
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): boolean {
-    if (localStorage.getItem('username') != null) {
-      return true;
-    } else {
-      this.routes.navigate(['/authentication/side-login']);
-      return false;
-    }
-  }
-}
-
-// -----------------------------------------------------------------------------------------
-// File : src/app/app-routing.module.ts
-// -----------------------------------------------------------------------------------------
-import { AuthGuard } from './auth.guard';
-const routes: Routes = [
-  {
-    path: '',
-    component: FullComponent,
-    canActivate: [AuthGuard],
-    children: [
-      {
-        path: '',
-        redirectTo: '/starter',
-        pathMatch: 'full',
-      },
-      {
-        path: 'starter',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
-      },
-    ],
-  },
-];
-
-                      </code>
-                    </pre>
+                </div>
+              </div>
             </div>
           </div>
+
+
+
+
           <!-- ============================================================== -->
-          <!-- End Page wrapper  -->
+          <!-- End Of Page Content -->
           <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Of Page Content -->
-        <!-- ============================================================== -->
-
       </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <!-- <footer class="footer bg-white text-center">
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <!-- <footer class="footer bg-white text-center">
           All Rights Reserved by Modernize. Designed and Developed by
           <a href="https://www.Adminmart.com">Adminmart.com</a>
         </footer> -->
 
+      <!-- ============================================================== -->
+      <!-- End footer -->
+      <!-- ============================================================== -->
+    </div>
     <!-- ============================================================== -->
-    <!-- End footer -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-  </div>
-  <!-- ============================================================== -->
-  <!-- End Page wrapper  -->
-  <!-- ============================================================== -->
   </div>
   <!-- ============================================================== -->
   <!-- End Wrapper -->
