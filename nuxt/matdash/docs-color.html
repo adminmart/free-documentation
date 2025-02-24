@@ -7,12 +7,12 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Modernize admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MatDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="MatDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/matdash-free-next-js-admin-template/" />
+  <title>MatDash Admin Template by Adminmart.com</title>
+  <link rel="canonical" href="https://adminmart.com/product/matdash-free-nuxt-js-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/matdash/favicon.ico" />
   <!-- This page css -->
@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
   <div class="d-lg-flex align-items-center px-4 py-3 bg-dark premium-header">
     <div class="d-flex align-items-center justify-content-center gap-5">
       <a class="d-flex align-items-center" href="https://adminmart.com/" target="_blank">
@@ -252,9 +253,9 @@
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                      class="ti ti-brand-firebase me-3 fs-4"></i>
-                    Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                      class="ti ti-link me-3 fs-4"></i>
+                      API Calls
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
@@ -372,9 +373,9 @@
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                        class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                        class="ti ti-link me-3 fs-4"></i>
+                        API Calls
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
 
@@ -419,6 +420,11 @@
             <!--End Logo icon -->
           </a>
           <div class="d-flex align-items-center">
+            <!-- <a
+                class="nav-toggler waves-effect waves-light pe-6 text-dark ms-3 d-lg-none d-block"
+                href="javascript:void(0)"
+                ><i class="ti ti-menu-2"></i
+              ></a> -->
             <!---Mobile view canvas button--->
             <a class="pe-6 text-muted ms-3 d-lg-none d-block" data-bs-toggle="offcanvas" href="#offcanvasExample"
               role="button" aria-controls="offcanvasExample">
@@ -435,7 +441,7 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Folder Structure</h4>
+          <h4 class="mb-4 pb-2">Color</h4>
 
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
@@ -453,116 +459,181 @@
           <div class="tab-content">
             <div class="tab-pane " id="profile" role="tabpanel">
               <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-  📦
-  ├── 📂 docs                                    > Documentation for the Theme
-  ├── 📂 figma-file                              > Figma of the pages
-  ├── 📂 package
-  │   ├── 📂 main                                > Demo
-  │   │   ├── 📂 public
-  │   │   ├── 📂 src
-  │   │   │   ├── 📂 assets
-  │   │   │   │   ├── 📂 images                  > All images used in the theme
-  │   │   │   ├── 📂 api                         > All data of apps & APIs
-  │   │   │   ├── 📂 components                  > App components
-  │   │   │   │   ├── 📂 apps                    > All app components
-  │   │   │   │   ├── 📂 container               > Meta Description
-  │   │   │   │   ├── 📂 custom-scroll           > Scrollbar component
-  │   │   │   │   ├── 📂 dashboards              > All dashboard components
-  │   │   │   │   ├── 📂 forms                   > All form components
-  │   │   │   │   ├── 📂 material-ui             > All UI components
-  │   │   │   │   ├── 📂 pages                   > All page components
-  │   │   │   │   ├── 📂 shared                  > Common components used across the theme
-  │   │   │   │   ├── 📂 tables                  > All table components
-  │   │   │   │   ├── 📂 widgets                 > All widget components
-  │   │   │   ├── 📂 contextapi                  > Manage data across all app components
-  │   │   │   ├── 📂 layouts
-  │   │   │   │   ├── 📂 blank                   > Blank layout for auth pages
-  │   │   │   │   ├── 📂 full                    > Full layout for inner pages
-  │   │   │   ├── 📂 routes                      > Page routing
-  │   │   │   ├── 📂 theme                       > Theme-level customization
-  │   │   │   ├── 📂 types                       > Define TypeScript types
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 auth
-  │   │   │   │   ├── 📂 layout
-  │   │   │   ├── 📂 utils                       > Language settings & helpers
-  │   │   │   │   ├── 📂 languages
-  │   │   │   ├── 📂 views                       > All pages
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 authentication
-  │   │   │   │   ├── 📂 charts
-  │   │   │   │   ├── 📂 dashboards
-  │   │   │   │   ├── 📂 forms
-  │   │   │   │   ├── 📂 pages
-  │   │   │   │   │   ├── 📂 landingpage
-  │   │   │   │   │   ├── 📂 frontend-pages
-  │   │   │   │   ├── 📂 spinner
-  │   │   │   │   ├── 📂 tables
-  │   │   │   │   ├── 📂 ui-components
-  │   │   │   │   ├── 📂 widgets
-  │   │   │   ├── 📄 App.tsx
-  │   │   │   ├── 📄 index.tsx
-  │   │   ├── 📄 package.json
-  │   ├── 📂 jwt-firebase                         > Demo
-  │   ├── 📂 dark                                 > Demo
-  │   ├── 📂 horizontal                           > Demo
-  │   ├── 📂 rtl                                  > Demo
-  │   ├── 📂 starterkit                           > Demo
-  │   ├── 📂 minisidebar                          > Demo
-  │   ├── 📂 default                              > Demo
+                <div class="p-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Override Light Theme Colors</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For any change in colors :
+                        <span class="text-dark font-medium">theme/LightTheme.ts</span>
+                      </h5>
+                      <pre>
+                        <code class="language-js py-0 hljs javascript">
+const BLUE_THEME: ThemeTypes = {
+  name: 'BLUE_THEME',
+  dark: false,
+  variables: {
+      'border-color': '#e0e6eb',
+      'border-opacity': 1
+  },
+  colors: {
+      primary: '#635BFF',
+      secondary: '#14E9E2',
+      info: '#46caeb',
+      success: '#36c76c',
+      warning: '#ffd648',
+      error: '#ff6692',
+      lightprimary: '#D5D3FC',
+      lightsecondary: '#D0FBF9',
+      lightsuccess: '#E1F7E9',
+      lighterror: '#FFD9E4',
+      lightinfo: '#DAF4FB',
+      lightwarning: '#FFF7DA',
+      textPrimary: '#0a2540',
+      textSecondary: '#7b8893',
+      borderColor: '#e0e6eb',
+      containerBg: '#ffffff',
+      background: '#F4F7FB',
+      hoverColor: '#f6f9fc',
+      surface: '#fff',
+      grey100: '#EAEFF4',
+      grey200: '#29343d',
+      light: '#EFF4FA',
+      muted:'#526b7a'
+  }
+};
 
-                    </code>
-                  </pre>
+export { BLUE_THEME };
+          </code>
+                                </pre>
+                    </div>
+                  </div>
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">
+                        Override Dark Theme Colors
+                      </h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For any change in colors :
+                        <span class="text-dark font-medium">theme/DarkTheme.ts</span>
+                      </h5>
+                      <pre>                    <code class="language-js py-0 hljs javascript">
+const DARK_BLUE_THEME: ThemeTypes = {
+  name: 'DARK_BLUE_THEME',
+  dark: true,
+  variables: {
+      'border-color': '#333F55',
+      'border-opacity': 1,
+  },
+  colors: {
+      primary: '#635BFF',
+      secondary: '#14E9E2',
+      info: '#3CACC8',
+      success: '#13DEB9',
+      warning: '#FFAE1F',
+      error: '#ff6692',
+      lightprimary: '#29305F',
+      lightsecondary: '#194D59',
+      lightsuccess: '#1B3C48',
+      lighterror: '#4B313D',
+      lightinfo:'#274A60',
+      lightwarning: '#4D3A2A',
+      textPrimary: '#EAEFF4',
+      textSecondary: '#7C8FAC',
+      borderColor: '#333F55',
+      containerBg: '#1A2537',
+      background: '#1F2A3D',
+      hoverColor: '#333f55',
+      surface: '#1a2537',
+      grey100: '#333F55',
+      grey200: '#465670',
+      light: '#1F2A3D'
+  }
+};
+
+export { BLUE_THEME };
+                                    </code>
+                                </pre>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane active" id="home" role="tabpanel">
               <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-📦
-├── 📄 hireus                               > Possibly a promotional or support file  
-├── 📄 discount-code                        > May contain discount information  
-├── 📂 package                              > Main project directory  
-│   ├── 📂 src                              > Source files for the application  
-│   │   ├── 📂 app                          > Main application folder  
-│   │   │   ├── 📂 DashboardLayout          > Contains all the pages  
-│   │   │   │   ├── 📂 icons                > Icon assets  
-│   │   │   │   ├── 📂 layout               > Header and sidebar for Vertical & Horizontal Layouts  
-│   │   │   │   ├── 📂 sample-page          > Sample UI page  
-│   │   │   │   ├── 📂 ui                   > UI-related components  
-│   │   │   │   ├── 📄 layout.tsx           > Layout configuration in TypeScript  
-│   │   │   │   ├── 📄 page.tsx             > Main page component  
-│   │   │   ├── 📂 auth                     > All authentication-related pages  
-│   │   │   ├── 📂 components               > All reusable components  
-│   │   │   ├── 📂 css                      > CSS stylesheets  
-│   │   │   ├── 📄 layout.tsx               > Layout file  
-│   │   │   ├── 📄 not-found.tsx            > 404 Page Not Found component  
-│   │   ├── 📂 utils                        > Custom theme utilities  
-├── 📄 next.config.js                        > Next.js configuration file  
-├── 📄 package.json                          > Node.js dependencies and scripts  
-├── 📄 tailwind.config.ts                    > Tailwind CSS configuration  
-├── 📄 tsconfig.json                         > TypeScript global configuration  
+                <div class="p-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        For any change in colors :
+                        <span class="text-dark font-medium">/theme/LightTheme.ts</span>
+                      </h5>
+                      <pre>
+                            <code class="language-js py-0">
+const BLUE_THEME: ThemeTypes = {
+  name: 'BLUE_THEME',
+  dark: false,
+  variables: {
+      'border-color': '#e0e6eb',
+      'border-opacity': 1
+  },
+  colors: {
+      primary: '#635BFF',
+      secondary: '#14E9E2',
+      info: '#46caeb',
+      success: '#36c76c',
+      warning: '#ffd648',
+      error: '#ff6692',
+      lightprimary: '#D5D3FC',
+      lightsecondary: '#D0FBF9',
+      lightsuccess: '#E1F7E9',
+      lighterror: '#FFD9E4',
+      lightinfo: '#DAF4FB',
+      lightwarning: '#FFF7DA',
+      textPrimary: '#0a2540',
+      textSecondary: '#7b8893',
+      borderColor: '#e0e6eb',
+      containerBg: '#ffffff',
+      background: '#F4F7FB',
+      hoverColor: '#f6f9fc',
+      surface: '#fff',
+      grey100: '#EAEFF4',
+      grey200: '#29343d',
+      light: '#EFF4FA',
+      muted:'#526b7a'
+  }
+};               
+                                    </code>
+                                </pre>
+                    </div>
+                  </div>
 
-                    </code>
-                  </pre>
+
                 </div>
               </div>
             </div>
           </div>
+
+
+          <!-- ============================================================== -->
+          <!-- End Of Page Content -->
+          <!-- ============================================================== -->
         </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <!-- <footer class="footer bg-white text-center">
+          All Rights Reserved by MatDash. Designed and Developed by
+          <a href="https://www.Adminmart.com">Adminmart.com</a>
+        </footer> -->
+
+      <!-- ============================================================== -->
+      <!-- End footer -->
       <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
@@ -586,6 +657,10 @@
   <script src="../../styles/assets/highlights/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#navbar-example3",
+    });
   </script>
   <!-- End JS -->
 </body>

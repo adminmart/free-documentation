@@ -7,12 +7,12 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Modernize admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MatDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="MatDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/matdash-free-next-js-admin-template/" />
+  <title>MatDash Admin Template by Adminmart.com</title>
+  <link rel="canonical" href="https://adminmart.com/product/matdash-free-nuxt-js-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/matdash/favicon.ico" />
   <!-- This page css -->
@@ -27,9 +27,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
+
   <div class="d-lg-flex align-items-center px-4 py-3 bg-dark premium-header">
     <div class="d-flex align-items-center justify-content-center gap-5">
       <a class="d-flex align-items-center" href="https://adminmart.com/" target="_blank">
@@ -252,9 +254,9 @@
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                      class="ti ti-brand-firebase me-3 fs-4"></i>
-                    Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                      class="ti ti-link me-3 fs-4"></i>
+                    API Calls
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
@@ -372,9 +374,9 @@
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                        class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                        class="ti ti-link me-3 fs-4"></i>
+                      API Calls
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
 
@@ -435,135 +437,49 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Folder Structure</h4>
+          <h4 class="mb-4 pb-2">Routing</h4>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">How to add page to sidebar ?</h4>
+              <pre>                            <code class="language-js py-0 hljs javascript">
+<span class="hljs-comment">// ----------------------------------------------------</span>
+<span class="hljs-comment">// File: /components/layout/full/vertical-sidebar/sidebarItem.ts</span>
+<span class="hljs-comment">// ----------------------------------------------------</span>
 
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
-                <span>Free Version</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
-                <span>Premium Version</span>
-              </a>
-            </li>
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane " id="profile" role="tabpanel">
-              <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-  📦
-  ├── 📂 docs                                    > Documentation for the Theme
-  ├── 📂 figma-file                              > Figma of the pages
-  ├── 📂 package
-  │   ├── 📂 main                                > Demo
-  │   │   ├── 📂 public
-  │   │   ├── 📂 src
-  │   │   │   ├── 📂 assets
-  │   │   │   │   ├── 📂 images                  > All images used in the theme
-  │   │   │   ├── 📂 api                         > All data of apps & APIs
-  │   │   │   ├── 📂 components                  > App components
-  │   │   │   │   ├── 📂 apps                    > All app components
-  │   │   │   │   ├── 📂 container               > Meta Description
-  │   │   │   │   ├── 📂 custom-scroll           > Scrollbar component
-  │   │   │   │   ├── 📂 dashboards              > All dashboard components
-  │   │   │   │   ├── 📂 forms                   > All form components
-  │   │   │   │   ├── 📂 material-ui             > All UI components
-  │   │   │   │   ├── 📂 pages                   > All page components
-  │   │   │   │   ├── 📂 shared                  > Common components used across the theme
-  │   │   │   │   ├── 📂 tables                  > All table components
-  │   │   │   │   ├── 📂 widgets                 > All widget components
-  │   │   │   ├── 📂 contextapi                  > Manage data across all app components
-  │   │   │   ├── 📂 layouts
-  │   │   │   │   ├── 📂 blank                   > Blank layout for auth pages
-  │   │   │   │   ├── 📂 full                    > Full layout for inner pages
-  │   │   │   ├── 📂 routes                      > Page routing
-  │   │   │   ├── 📂 theme                       > Theme-level customization
-  │   │   │   ├── 📂 types                       > Define TypeScript types
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 auth
-  │   │   │   │   ├── 📂 layout
-  │   │   │   ├── 📂 utils                       > Language settings & helpers
-  │   │   │   │   ├── 📂 languages
-  │   │   │   ├── 📂 views                       > All pages
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 authentication
-  │   │   │   │   ├── 📂 charts
-  │   │   │   │   ├── 📂 dashboards
-  │   │   │   │   ├── 📂 forms
-  │   │   │   │   ├── 📂 pages
-  │   │   │   │   │   ├── 📂 landingpage
-  │   │   │   │   │   ├── 📂 frontend-pages
-  │   │   │   │   ├── 📂 spinner
-  │   │   │   │   ├── 📂 tables
-  │   │   │   │   ├── 📂 ui-components
-  │   │   │   │   ├── 📂 widgets
-  │   │   │   ├── 📄 App.tsx
-  │   │   │   ├── 📄 index.tsx
-  │   │   ├── 📄 package.json
-  │   ├── 📂 jwt-firebase                         > Demo
-  │   ├── 📂 dark                                 > Demo
-  │   ├── 📂 horizontal                           > Demo
-  │   ├── 📂 rtl                                  > Demo
-  │   ├── 📂 starterkit                           > Demo
-  │   ├── 📂 minisidebar                          > Demo
-  │   ├── 📂 default                              > Demo
+const sidebarItem: menu[] = [
 
+    { header: 'Home' },
+    {
+        title: 'Dashboard',
+        icon: 'widget-add-line-duotone',
+        to: '/'
+    },
+    { header: 'utilities' },
+    {
+        title: 'Typography',
+        icon: 'text-circle-outline',
+        to: '/ui/typography'
+    },
+    {
+        title: 'Shadow',
+        icon: 'watch-square-minimalistic-charge-line-duotone',
+        to: '/ui/shadow'
+    },
+]
                     </code>
-                  </pre>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane active" id="home" role="tabpanel">
-              <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-📦
-├── 📄 hireus                               > Possibly a promotional or support file  
-├── 📄 discount-code                        > May contain discount information  
-├── 📂 package                              > Main project directory  
-│   ├── 📂 src                              > Source files for the application  
-│   │   ├── 📂 app                          > Main application folder  
-│   │   │   ├── 📂 DashboardLayout          > Contains all the pages  
-│   │   │   │   ├── 📂 icons                > Icon assets  
-│   │   │   │   ├── 📂 layout               > Header and sidebar for Vertical & Horizontal Layouts  
-│   │   │   │   ├── 📂 sample-page          > Sample UI page  
-│   │   │   │   ├── 📂 ui                   > UI-related components  
-│   │   │   │   ├── 📄 layout.tsx           > Layout configuration in TypeScript  
-│   │   │   │   ├── 📄 page.tsx             > Main page component  
-│   │   │   ├── 📂 auth                     > All authentication-related pages  
-│   │   │   ├── 📂 components               > All reusable components  
-│   │   │   ├── 📂 css                      > CSS stylesheets  
-│   │   │   ├── 📄 layout.tsx               > Layout file  
-│   │   │   ├── 📄 not-found.tsx            > 404 Page Not Found component  
-│   │   ├── 📂 utils                        > Custom theme utilities  
-├── 📄 next.config.js                        > Next.js configuration file  
-├── 📄 package.json                          > Node.js dependencies and scripts  
-├── 📄 tailwind.config.ts                    > Tailwind CSS configuration  
-├── 📄 tsconfig.json                         > TypeScript global configuration  
-
-                    </code>
-                  </pre>
-                </div>
-              </div>
+                </pre>
             </div>
           </div>
+          <!-- ============================================================== -->
+          <!-- End Of Page Content -->
+          <!-- ============================================================== -->
+
         </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->

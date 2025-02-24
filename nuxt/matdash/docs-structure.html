@@ -7,12 +7,12 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Modernize admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MatDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="MatDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/matdash-free-next-js-admin-template/" />
+  <title>MatDash Admin Template by Adminmart.com</title>
+  <link rel="canonical" href="https://adminmart.com/product/matdash-free-nuxt-js-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/matdash/favicon.ico" />
   <!-- This page css -->
@@ -252,9 +252,9 @@
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                      class="ti ti-brand-firebase me-3 fs-4"></i>
-                    Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                      class="ti ti-link me-3 fs-4"></i>
+                    API Calls
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
@@ -372,9 +372,9 @@
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                        class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                        class="ti ti-link me-3 fs-4"></i>
+                      API Calls
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
 
@@ -454,69 +454,76 @@
             <div class="tab-pane " id="profile" role="tabpanel">
               <div class="p-3 border border-top-0 rounded-bottom">
                 <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
+                  <h4 class="font-weight-medium">MatDash Nuxtjs Dashboard</h4>
                   <pre class="">
                     <code class="language-plaintext">
-  📦
-  ├── 📂 docs                                    > Documentation for the Theme
-  ├── 📂 figma-file                              > Figma of the pages
-  ├── 📂 package
-  │   ├── 📂 main                                > Demo
-  │   │   ├── 📂 public
-  │   │   ├── 📂 src
-  │   │   │   ├── 📂 assets
-  │   │   │   │   ├── 📂 images                  > All images used in the theme
-  │   │   │   ├── 📂 api                         > All data of apps & APIs
-  │   │   │   ├── 📂 components                  > App components
-  │   │   │   │   ├── 📂 apps                    > All app components
-  │   │   │   │   ├── 📂 container               > Meta Description
-  │   │   │   │   ├── 📂 custom-scroll           > Scrollbar component
-  │   │   │   │   ├── 📂 dashboards              > All dashboard components
-  │   │   │   │   ├── 📂 forms                   > All form components
-  │   │   │   │   ├── 📂 material-ui             > All UI components
-  │   │   │   │   ├── 📂 pages                   > All page components
-  │   │   │   │   ├── 📂 shared                  > Common components used across the theme
-  │   │   │   │   ├── 📂 tables                  > All table components
-  │   │   │   │   ├── 📂 widgets                 > All widget components
-  │   │   │   ├── 📂 contextapi                  > Manage data across all app components
-  │   │   │   ├── 📂 layouts
-  │   │   │   │   ├── 📂 blank                   > Blank layout for auth pages
-  │   │   │   │   ├── 📂 full                    > Full layout for inner pages
-  │   │   │   ├── 📂 routes                      > Page routing
-  │   │   │   ├── 📂 theme                       > Theme-level customization
-  │   │   │   ├── 📂 types                       > Define TypeScript types
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 auth
-  │   │   │   │   ├── 📂 layout
-  │   │   │   ├── 📂 utils                       > Language settings & helpers
-  │   │   │   │   ├── 📂 languages
-  │   │   │   ├── 📂 views                       > All pages
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 authentication
-  │   │   │   │   ├── 📂 charts
-  │   │   │   │   ├── 📂 dashboards
-  │   │   │   │   ├── 📂 forms
-  │   │   │   │   ├── 📂 pages
-  │   │   │   │   │   ├── 📂 landingpage
-  │   │   │   │   │   ├── 📂 frontend-pages
-  │   │   │   │   ├── 📂 spinner
-  │   │   │   │   ├── 📂 tables
-  │   │   │   │   ├── 📂 ui-components
-  │   │   │   │   ├── 📂 widgets
-  │   │   │   ├── 📄 App.tsx
-  │   │   │   ├── 📄 index.tsx
-  │   │   ├── 📄 package.json
-  │   ├── 📂 jwt-firebase                         > Demo
-  │   ├── 📂 dark                                 > Demo
-  │   ├── 📂 horizontal                           > Demo
-  │   ├── 📂 rtl                                  > Demo
-  │   ├── 📂 starterkit                           > Demo
-  │   ├── 📂 minisidebar                          > Demo
-  │   ├── 📂 default                              > Demo
-
-                    </code>
+📦  
+├── 📂 docs                                  > Documentation for the theme  
+├── 📂 packages  
+│   ├── 📂 main                              > Main demo package  
+│   │   ├── 📂 _mockApis                     > Mock API data for testing  
+│   │   ├── 📂 assets                        > All assets used in the theme  
+│   │   │   ├── 📂 scss                      > SCSS stylesheets for theme styling  
+│   │   ├── 📂 components                    > All reusable components  
+│   │   │   ├── 📂 apps                      > App-specific components  
+│   │   │   ├── 📂 auth                      > Authentication-related components  
+│   │   │   ├── 📂 forms                     > All form components  
+│   │   │   ├── 📂 landingpage               > Landing page components  
+│   │   │   ├── 📂 lc                        > Localization-related components  
+│   │   │   ├── 📂 pages                     > Page-level components  
+│   │   │   ├── 📂 shared                    > Common components used across the app  
+│   │   │   ├── 📂 style-components          > Styled components for UI customization  
+│   │   │   ├── 📂 table                     > Table components for data display  
+│   │   │   ├── 📂 ui-components             > UI elements like buttons, modals, etc.  
+│   │   │   ├── 📂 widgets                   > Dashboard widgets and UI elements  
+│   │   ├── 📂 layouts                       > Page layout components  
+│   │   │   ├── 📄 blank.vue                 > Blank layout (used for authentication)  
+│   │   │   ├── 📄 default.vue               > Default layout for main pages  
+│   │   ├── 📂 pages                         > All pages of the theme  
+│   │   │   ├── 📂 apps                      > App-related pages  
+│   │   │   ├── 📂 auth                      > Authentication pages  
+│   │   │   ├── 📂 charts                    > Chart pages for data visualization  
+│   │   │   ├── 📂 dashboard                 > Dashboard pages  
+│   │   │   ├── 📂 forms                     > Form-related pages  
+│   │   │   ├── 📂 theme-pages               > Theme customization pages  
+│   │   │   ├── 📂 tables                    > Table-related pages  
+│   │   │   ├── 📂 ui-components             > UI components demo pages  
+│   │   │   ├── 📂 widgets                   > Widget pages  
+│   │   │   ├── 📄 index.vue                 > Main entry page for routing  
+│   │   ├── 📂 plugins                       > Additional plugins used in the theme  
+│   │   │   ├── 📄 vuetify.ts                 > Vuetify plugin configuration  
+│   │   ├── 📂 public                        > Publicly accessible assets  
+│   │   │   ├── 📂 images                    > All images used in the theme  
+│   │   ├── 📂 router                        > Vue router configuration for navigation  
+│   │   ├── 📂 store                         > Vuex store for managing app state  
+│   │   │   ├── 📂 apps                      > Store modules for apps  
+│   │   │   ├── 📄 auth.ts                   > Authentication state management  
+│   │   │   ├── 📄 authUser.ts               > User authentication state  
+│   │   │   ├── 📄 customizer.ts             > Theme and layout customizations  
+│   │   ├── 📂 theme                         > Theme-level settings and configurations  
+│   │   ├── 📂 types                         > TypeScript types for app consistency  
+│   │   │   ├── 📂 apps                      > Types related to apps  
+│   │   │   ├── 📂 components                > Types for components  
+│   │   │   ├── 📂 customers                 > Customer-related types  
+│   │   │   ├── 📂 landingpage               > Landing page types  
+│   │   │   ├── 📂 themeTypes                > Types for theme settings  
+│   │   ├── 📂 utils                         > Utility functions and helpers  
+│   │   │   ├── 📂 helpers                   > Helper functions  
+│   │   │   ├── 📂 locals                    > Localization utilities  
+│   │   │   ├── 📄 axios.ts                  > Axios HTTP client configuration  
+│   │   ├── 📄 app.vue                       > Root Vue app component  
+│   │   ├── 📄 config.ts                     > Configuration settings for the app  
+│   │   ├── 📄 error.vue                     > Error page component  
+│   │   ├── 📄 nuxt.config.ts                > Nuxt.js configuration file  
+│   │   ├── 📄 package.json                  > Project dependencies and scripts  
+│   │   ├── 📄 tsconfig.json                 > TypeScript configuration  
+│   ├── 📂 dark                              > Dark mode demo  
+│   ├── 📂 horizontal                        > Horizontal layout demo  
+│   ├── 📂 minisidebar                       > Mini sidebar layout demo  
+│   ├── 📂 rtl                               > Right-to-left (RTL) layout demo  
+│   ├── 📂 starterkit                        > Starter template with basic features  
+                     
+                                    </code>
                   </pre>
                 </div>
               </div>
@@ -525,35 +532,46 @@
               <div class="p-3 border border-top-0 rounded-bottom">
                 <div class="bg-light p-3 rounded">
                   <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
+                    MatDash NuxtJs Dashboard
                   </h4>
                   <pre class="">
                     <code class="language-plaintext">
 📦
-├── 📄 hireus                               > Possibly a promotional or support file  
-├── 📄 discount-code                        > May contain discount information  
-├── 📂 package                              > Main project directory  
-│   ├── 📂 src                              > Source files for the application  
-│   │   ├── 📂 app                          > Main application folder  
-│   │   │   ├── 📂 DashboardLayout          > Contains all the pages  
-│   │   │   │   ├── 📂 icons                > Icon assets  
-│   │   │   │   ├── 📂 layout               > Header and sidebar for Vertical & Horizontal Layouts  
-│   │   │   │   ├── 📂 sample-page          > Sample UI page  
-│   │   │   │   ├── 📂 ui                   > UI-related components  
-│   │   │   │   ├── 📄 layout.tsx           > Layout configuration in TypeScript  
-│   │   │   │   ├── 📄 page.tsx             > Main page component  
-│   │   │   ├── 📂 auth                     > All authentication-related pages  
-│   │   │   ├── 📂 components               > All reusable components  
-│   │   │   ├── 📂 css                      > CSS stylesheets  
-│   │   │   ├── 📄 layout.tsx               > Layout file  
-│   │   │   ├── 📄 not-found.tsx            > 404 Page Not Found component  
-│   │   ├── 📂 utils                        > Custom theme utilities  
-├── 📄 next.config.js                        > Next.js configuration file  
-├── 📄 package.json                          > Node.js dependencies and scripts  
-├── 📄 tailwind.config.ts                    > Tailwind CSS configuration  
-├── 📄 tsconfig.json                         > TypeScript global configuration  
-
-                    </code>
+├── 📂 landingpage                > Landing page directory
+├── 📂 package                    > Main project directory
+│   ├── 📂 components             > Reusable UI components
+│   │   ├── 📂 auth               > Authentication components
+│   │   ├── 📂 dashboard          > Dashboard components
+│   │   ├── 📂 layout             > Layout components
+│   │   ├── 📂 shared             > Shared components used across pages
+│   │   ├── 📂 style-components   > Styled components
+│   ├── 📂 data                   > Data-related files
+│   │   ├── 📂 dashboard          > Dashboard data
+│   ├── 📂 layouts                > Page layout components
+│   │   ├── 📄 blank.vue          > Blank layout for authentication pages
+│   │   ├── 📄 default.vue        > Default layout for general pages
+│   ├── 📂 pages                  > All application pages
+│   │   ├── 📂 auth               > Authentication pages
+│   │   ├── 📂 ui                 > UI-related pages
+│   │   ├── 📄 icons.vue          > Icons page
+│   │   ├── 📄 sample-page.vue    > Sample page
+│   │   ├── 📄 index.vue          > Main index page
+│   ├── 📂 plugins                > Plugins used in the project
+│   │   ├── 📄 vuetify.ts         > Vuetify setup file
+│   ├── 📂 public                 > Public assets such as images
+│   │   ├── 📂 images             > Image assets
+│   ├── 📂 scss                   > SCSS styling files
+│   ├── 📂 theme                  > Theme configuration files
+│   ├── 📂 types                  > TypeScript type definitions
+│   ├── 📄 .gitignore             > Git ignore file
+│   ├── 📄 .npmrc                 > NPM configuration file
+│   ├── 📄 README.md              > Project documentation
+│   ├── 📄 app.vue                > Root Vue component
+│   ├── 📄 error.vue              > Error page component
+│   ├── 📄 nuxt.config.ts         > Nuxt.js configuration file
+│   ├── 📄 package.json           > Project dependencies and scripts
+│   ├── 📄 tsconfig.json          > TypeScript configuration
+</code>
                   </pre>
                 </div>
               </div>

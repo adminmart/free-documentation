@@ -7,12 +7,12 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords"
-    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Modernize admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
+    content="Adminmart.com, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, MatDash admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, material design, material dashboard bootstrap 5 dashboard template" />
   <meta name="description"
-    content="Modernize is powerful and clean admin dashboard template, inpired from Google's Material Design" />
+    content="MatDash is powerful and clean admin dashboard template, inpired from Google's Material Design" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Modernize Admin Template by Adminmart.com</title>
-  <link rel="canonical" href="https://adminmart.com/product/matdash-free-next-js-admin-template/" />
+  <title>MatDash Admin Template by Adminmart.com</title>
+  <link rel="canonical" href="https://adminmart.com/product/matdash-free-nuxt-js-admin-template/" />
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="15x15" href="../../styles/dist/images/matdash/favicon.ico" />
   <!-- This page css -->
@@ -27,6 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
@@ -252,9 +253,9 @@
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                      class="ti ti-brand-firebase me-3 fs-4"></i>
-                    Authentication
+                  <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                      class="ti ti-link me-3 fs-4"></i>
+                      API Calls
                     <span class="badge bg-secondary f-s-12">PRO</span></a>
                 </li>
                 <li class="sidebar-item">
@@ -372,9 +373,9 @@
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-auth.html"><i
-                        class="ti ti-brand-firebase me-3 fs-4"></i>
-                      Authentication
+                    <a class="nav-link sidebar-link d-flex align-items-center" href="docs-api-calls.html"><i
+                        class="ti ti-link me-3 fs-4"></i>
+                        API Calls
                       <span class="badge bg-secondary f-s-12">PRO</span></a>
                   </li>
 
@@ -435,135 +436,130 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
-          <h4 class="mb-4 pb-2">Folder Structure</h4>
+          <h4 class="mb-4 pb-2">Multi Language</h4>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">1. Add content</h4>
+              <pre>
+                        <code class="language-js py-0 ">
+// ----------------------------------------------------
+// File: utils/locales/ar.json  
+// ----------------------------------------------------  
 
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
-                <span>Free Version</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
-                <span>Premium Version</span>
-              </a>
-            </li>
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane " id="profile" role="tabpanel">
-              <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-  📦
-  ├── 📂 docs                                    > Documentation for the Theme
-  ├── 📂 figma-file                              > Figma of the pages
-  ├── 📂 package
-  │   ├── 📂 main                                > Demo
-  │   │   ├── 📂 public
-  │   │   ├── 📂 src
-  │   │   │   ├── 📂 assets
-  │   │   │   │   ├── 📂 images                  > All images used in the theme
-  │   │   │   ├── 📂 api                         > All data of apps & APIs
-  │   │   │   ├── 📂 components                  > App components
-  │   │   │   │   ├── 📂 apps                    > All app components
-  │   │   │   │   ├── 📂 container               > Meta Description
-  │   │   │   │   ├── 📂 custom-scroll           > Scrollbar component
-  │   │   │   │   ├── 📂 dashboards              > All dashboard components
-  │   │   │   │   ├── 📂 forms                   > All form components
-  │   │   │   │   ├── 📂 material-ui             > All UI components
-  │   │   │   │   ├── 📂 pages                   > All page components
-  │   │   │   │   ├── 📂 shared                  > Common components used across the theme
-  │   │   │   │   ├── 📂 tables                  > All table components
-  │   │   │   │   ├── 📂 widgets                 > All widget components
-  │   │   │   ├── 📂 contextapi                  > Manage data across all app components
-  │   │   │   ├── 📂 layouts
-  │   │   │   │   ├── 📂 blank                   > Blank layout for auth pages
-  │   │   │   │   ├── 📂 full                    > Full layout for inner pages
-  │   │   │   ├── 📂 routes                      > Page routing
-  │   │   │   ├── 📂 theme                       > Theme-level customization
-  │   │   │   ├── 📂 types                       > Define TypeScript types
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 auth
-  │   │   │   │   ├── 📂 layout
-  │   │   │   ├── 📂 utils                       > Language settings & helpers
-  │   │   │   │   ├── 📂 languages
-  │   │   │   ├── 📂 views                       > All pages
-  │   │   │   │   ├── 📂 apps
-  │   │   │   │   ├── 📂 authentication
-  │   │   │   │   ├── 📂 charts
-  │   │   │   │   ├── 📂 dashboards
-  │   │   │   │   ├── 📂 forms
-  │   │   │   │   ├── 📂 pages
-  │   │   │   │   │   ├── 📂 landingpage
-  │   │   │   │   │   ├── 📂 frontend-pages
-  │   │   │   │   ├── 📂 spinner
-  │   │   │   │   ├── 📂 tables
-  │   │   │   │   ├── 📂 ui-components
-  │   │   │   │   ├── 📂 widgets
-  │   │   │   ├── 📄 App.tsx
-  │   │   │   ├── 📄 index.tsx
-  │   │   ├── 📄 package.json
-  │   ├── 📂 jwt-firebase                         > Demo
-  │   ├── 📂 dark                                 > Demo
-  │   ├── 📂 horizontal                           > Demo
-  │   ├── 📂 rtl                                  > Demo
-  │   ├── 📂 starterkit                           > Demo
-  │   ├── 📂 minisidebar                          > Demo
-  │   ├── 📂 default                              > Demo
+{
+    "Modern": "عصري",
+    "Contacts":"جهات الاتصال",
+    "Chats":"الدردشات"
+}
 
-                    </code>
-                  </pre>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane active" id="home" role="tabpanel">
-              <div class="p-3 border border-top-0 rounded-bottom">
-                <div class="bg-light p-3 rounded">
-                  <h4 class="font-weight-medium">
-                    MatDash NextJs Dashboard
-                  </h4>
-                  <pre class="">
-                    <code class="language-plaintext">
-📦
-├── 📄 hireus                               > Possibly a promotional or support file  
-├── 📄 discount-code                        > May contain discount information  
-├── 📂 package                              > Main project directory  
-│   ├── 📂 src                              > Source files for the application  
-│   │   ├── 📂 app                          > Main application folder  
-│   │   │   ├── 📂 DashboardLayout          > Contains all the pages  
-│   │   │   │   ├── 📂 icons                > Icon assets  
-│   │   │   │   ├── 📂 layout               > Header and sidebar for Vertical & Horizontal Layouts  
-│   │   │   │   ├── 📂 sample-page          > Sample UI page  
-│   │   │   │   ├── 📂 ui                   > UI-related components  
-│   │   │   │   ├── 📄 layout.tsx           > Layout configuration in TypeScript  
-│   │   │   │   ├── 📄 page.tsx             > Main page component  
-│   │   │   ├── 📂 auth                     > All authentication-related pages  
-│   │   │   ├── 📂 components               > All reusable components  
-│   │   │   ├── 📂 css                      > CSS stylesheets  
-│   │   │   ├── 📄 layout.tsx               > Layout file  
-│   │   │   ├── 📄 not-found.tsx            > 404 Page Not Found component  
-│   │   ├── 📂 utils                        > Custom theme utilities  
-├── 📄 next.config.js                        > Next.js configuration file  
-├── 📄 package.json                          > Node.js dependencies and scripts  
-├── 📄 tailwind.config.ts                    > Tailwind CSS configuration  
-├── 📄 tsconfig.json                         > TypeScript global configuration  
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: utils/locales/zh.json
+// ----------------------------------------------------  
+  
+{
+    "Modern": "現代的",
+    "Contacts":"聯繫人",
+    "Chats":"聊天記錄"
+}
 
-                    </code>
-                  </pre>
-                </div>
-              </div>
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: utils/locales/en.json
+// ----------------------------------------------------  
+  
+{
+    "Modern": "Modern",
+    "Contacts":"Contacts",
+    "Chats":"Chats"
+}
+
+</code>
+<code class="language-js py-0 mt-4">
+// ----------------------------------------------------
+// File: utils/locales/fr.json
+// ---------------------------------------------------- 
+
+{
+    "Modern": "Moderne",
+    "Contacts":"Les contacts",
+    "Chats":"Chattes"
+}
+                        </code>
+                    </pre>
             </div>
           </div>
+          <div class="mt-4 card">
+            <div class="card-body">
+              <h4 class="card-title">2. Usage</h4>
+              <pre class="mt-4">
+<code class="language-js py-0">
+// ----------------------------------------------------
+// File: components/lc/full/vertical-header/languageDD.vue
+// ---------------------------------------------------- 
+
+&lt;script setup lang="ts"&gt;
+  import { ref } from 'vue';
+  import { languageDD } from '@/_mockApis/headerData';
+  import flag1 from '/images/flag/icon-flag-en.svg';
+  import flag2 from '/images/flag/icon-flag-ro.svg';
+  import flag3 from '/images/flag/icon-flag-zh.svg';
+  import flag4 from '/images/flag/icon-flag-fr.svg';
+&lt;/script&gt;
+  &lt;template&gt;
+      &lt;v-menu :close-on-content-click="false" location="bottom"&gt;
+        &lt;template v-slot:activator="{ props }"&gt;
+          &lt;v-btn icon variant="text" color="primary" class="custom-hover-primary" size="small" v-bind="props"&gt;
+            &lt;v-avatar size="22"&gt;
+                &lt;img v-if="$i18n.locale === 'en'" :src="flag1" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'fr'" :src="flag4" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'ro'" :src="flag2" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
+                &lt;img v-if="$i18n.locale === 'zh'" :src="flag3" :alt="$i18n.locale" width="22" height="22" class="obj-cover" /&gt;
+            &lt;/v-avatar&gt;
+          &lt;/v-btn&gt;
+        &lt;/template&gt;
+        &lt;v-sheet rounded="md" width="200" elevation="10"&gt;
+          &lt;v-list class="theme-list"&gt;
+            &lt;v-list-item
+              v-for="(item, index) in languageDD"
+              :key="index"
+              color="primary"
+              :active="$i18n.locale == item.value"
+              class="d-flex align-center"
+              @click="() =&gt; ($i18n.locale = item.value)"
+            &gt;
+                &lt;template v-slot:prepend&gt;
+                  &lt;v-avatar size="22"&gt;
+                    &lt;img :src="item.avatar" :alt="item.avatar" width="22" height="22" class="obj-cover" /&gt;
+                  &lt;/v-avatar>
+                &lt;/template>
+                &lt;v-list-item-title class="text-subtitle-1 font-weight-regular"&gt;
+                    {{ item.title }}
+                    &lt;span class="text-disabled text-subtitle-1 pl-2"&gt;({{ item.subtext }})&lt;/span&gt;
+                &lt;/v-list-item-title&gt;
+            &lt;/v-list-item&gt;
+          &lt;/v-list&gt;
+        &lt;/v-sheet&gt;
+      &lt;/v-menu&gt;
+  &lt;/template&gt;
+
+</code>
+
+                    </pre>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Of Page Content -->
+          <!-- ============================================================== -->
+
         </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
       <!-- ============================================================== -->
+
     </div>
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
