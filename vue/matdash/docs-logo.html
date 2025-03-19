@@ -462,27 +462,54 @@
                 <div class="p-3">
                   <div class="mt-4 card">
                     <div class="card-body">
-                      <h4 class="card-title">Change Logo</h4>
+                      <h4 class="card-title">Change light Logo</h4>
                       <h5 class="card-subtitle mt-2 text-muted mb-4">
                         To change logo :
-                        <span class="text-dark font-medium">/src/layouts/full/logo/Logo.vue</span>
+                        <span class="text-dark font-medium">packages/main/src/layouts/full/logo/Logo.vue</span>
                       </h5>
                       <div class="border-2 border-start border-primary bg-light rounded p-3">
-                        Put the logo image into the /assets/images/logos folder.
+                        Put the logo image into the /images/logos folder.
                       </div>
                       <pre>
                             <code class="language-js py-0">
-&lt;script setup lang=&quot;ts&quot;&gt;
-  import { RouterLink } from 'vue-router';
-  import Logoimg from '@/assets/images/logos/logo.svg';
-&lt;/script&gt;
-&lt;template>
-  &lt;div class="logo">
-      &lt;RouterLink to=&quot;/&quot;&gt;
-        &lt;img :src=&quot;Logoimg&quot; alt=&quot;home&quot; /&gt;
-      &lt;/RouterLink&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+        &lt;script setup lang="ts"&gt;
+          import { RouterLink } from 'vue-router';
+          import Logoimg from '@/assets/images/logos/logo.svg';
+        &lt;/script&gt;
+        &lt;template&gt;
+            &lt;div class="logo"&gt;
+                &lt;RouterLink to="/"&gt;
+                    &lt;img :src="Logoimg" alt="home" /&gt;
+                &lt;/RouterLink&gt;
+            &gt;/div&lt;
+        &gt;/template&lt;
+              </code>
+                                </pre>
+                    </div>
+                  </div>
+                  <div class="mt-4 card">
+                    <div class="card-body">
+                      <h4 class="card-title">Change Dark Logo</h4>
+                      <h5 class="card-subtitle mt-2 text-muted mb-4">
+                        To change logo :
+                        <span class="text-dark font-medium">packages/main/src/layouts/full/logo/LogoIcon.vue</span>
+                      </h5>
+                      <div class="border-2 border-start border-primary bg-light rounded p-3">
+                        Put the logo image into the /images/logos folder.
+                      </div>
+                      <pre>
+                            <code class="language-js py-0">
+        &lt;script setup lang="ts"&gt;
+          import { RouterLink } from 'vue-router';
+          import Logoiconimg from '@/assets/images/logos/logo-icon.svg';
+        &lt;/script&gt;
+        &lt;template&gt;
+            &lt;div class="logo"&gt;
+                &lt;RouterLink to="/"&gt;
+                    &lt;img :src="Logoiconimg" alt="home" /&gt;
+                &lt;/RouterLink&gt;
+            &gt;/div&lt;
+        &gt;/template&lt;
               </code>
                                 </pre>
                     </div>
