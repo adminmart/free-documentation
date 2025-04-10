@@ -98,6 +98,21 @@ $h4-font-size: 18px !default;
 $h5-font-size: 16px !default;
 $h6-font-size: 14px !default;
 
+// Spacer
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: 12px,
+  7: 30px,
+  8: 10px,
+  9: 20px,
+  ) !default;
+
 // Buttons
 $btn-secondary-border: $gray-300;
 
@@ -126,16 +141,20 @@ $enable-shadows: true !default;
 $box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12) !default;
 
 // Buttons
-$btn-padding-y: 9px;
-$btn-padding-x: 16px;
-$btn-font-weight: $font-weight-normal;
-$btn-border-radius: 7px;
+
+$btn-padding-y: 7px !default;
+$btn-padding-x: 16px !default;
+$btn-font-weight: 500 !default;
+$btn-border-radius: 7px !default;
+$btn-box-shadow: unset !default;
+$btn-font-size: 14 !default;
+$btn-border-radius-lg: 9px !default;
 
 //offcanvas width
 $offcanvas-horizontal-width: 270px;
 
 html {
-  --bs-btn-padding-y: 9px;
+  --bs-btn-padding-y: 7px;
 
   .dropdown-menu {
     --bs-dropdown-item-padding-y: 11px;
