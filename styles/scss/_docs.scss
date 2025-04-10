@@ -4,10 +4,12 @@
   left: 0;
   width: 100%;
   z-index: 8;
+
   .hover-link {
     opacity: 0.8;
+
     &:hover {
-     opacity: 1;
+      opacity: 1;
     }
   }
 }
@@ -16,7 +18,16 @@
   .premium-header {
     top: 61px;
   }
-} 
+}
+
+.btn-gredient {
+  border: 0;
+  background: linear-gradient(94deg, #9f8be9 0, #e577ac 53.08%, #ed7853 97.99%), rgba(255, 255, 255, .05);
+
+  &:hover {
+    background: linear-gradient(90deg, #ed7853 0, #e577ac 53.08%, #9f8be9 97.99%);
+  }
+}
 
 
 .docs {
@@ -26,26 +37,26 @@
     font-size: 16px;
     margin-top: 73px;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       margin-top: 150px;
     }
   }
 
-  
 
-  
   .left-sidebar {
     width: 270px;
     flex-shrink: 0;
     position: fixed;
     left: 0;
     border-right: 1px solid $border-color;
-    height: calc(100vh - 80px);  
+    height: calc(100vh - 80px);
     transition: all 0.2s linear;
     z-index: 9999;
     background-color: $white;
+
     #sidebarnav {
       padding: 20px;
+
       .collapse.in {
         display: block;
       }
@@ -57,8 +68,10 @@
         font-size: 12px;
         color: $dark;
       }
+
       .sidebar-item {
         margin-bottom: 5px;
+
         .has-arrow {
           &::after {
             position: absolute;
@@ -83,6 +96,7 @@
             -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
           }
+
           &.active {
             &::after {
               -webkit-transform: rotate(45deg) translate(0, -50%);
@@ -94,33 +108,40 @@
             }
           }
         }
+
         .nav-link {
           position: relative;
           padding: 12px 12px;
           color: $muted;
           font-weight: $font-weight-medium;
           font-size: 14px;
+
           .badge {
             position: absolute;
             right: 12px;
             top: 15px;
             line-height: 12px;
           }
+
           &.has-arrow {
             .badge {
               right: 27px;
             }
           }
+
           &.active {
             color: $white;
           }
+
           &:hover {
             background-color: rgba($color: $dark, $alpha: 0.1);
             color: $dark;
+
             &.has-arrow {
               &::after {
                 border-color: $dark;
               }
+
               &.active {
                 &::after {
                   border-color: $dark;
@@ -129,11 +150,13 @@
             }
           }
         }
+
         .sub-link {
           &:hover {
             background-color: transparent;
             color: $dark;
           }
+
           &.active {
             background-color: transparent;
             color: $dark;
@@ -142,9 +165,11 @@
       }
     }
   }
+
   .page-wrapper {
     margin-left: 270px;
     width: 100%;
+
     .container-fluid {
       max-width: 1000px;
       margin: 0 auto;
@@ -152,7 +177,7 @@
     }
   }
 
- 
+
 
   .card {
     border: 1px solid $border-color;
@@ -163,19 +188,23 @@
   a {
     text-decoration: none;
   }
+
   pre {
     display: grid;
     margin: 15px 0 0;
+
     code.hljs {
       border-radius: $border-radius-md;
     }
   }
 }
+
 @include media-breakpoint-down(lg) {
   .docs {
     .left-sidebar {
       left: 0px;
     }
+
     .page-wrapper {
       margin-left: 0;
       padding-top: 0;
