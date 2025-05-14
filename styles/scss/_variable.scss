@@ -71,7 +71,7 @@ $theme-colors: (
   "dark": $dark,
   "muted": $muted,
   "indigo": $indigo,
-) !default;
+  ) !default;
 
 // Quickly modify global styling by enabling or disabling optional features.
 // Settings for the `<body>` element.
@@ -85,7 +85,8 @@ $grid-gutter-width: 20px !default;
 // Font, line-height, and color for body text, headings, and more.
 
 $font-size-base: 0.875rem;
-$font-family-sans-serif: "Plus Jakarta Sans", sans-serif !default;
+$font-family-sans-serif: "Plus Jakarta Sans",
+  sans-serif !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 500 !default;
@@ -158,11 +159,12 @@ html {
 
   .dropdown-menu {
     --bs-dropdown-item-padding-y: 11px;
-    --bs-dropdown-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
-    --bs-dropdown-border-width: 0;
-  }
+    --bs-dropdown-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10
+    );
+  --bs-dropdown-border-width: 0;
+}
 
-  .nav-pills {
-    --bs-nav-pills-link-active-bg : #11142d; 
-  }
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #11142d;
+}
 }

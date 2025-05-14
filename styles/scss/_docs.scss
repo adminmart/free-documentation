@@ -1,33 +1,81 @@
-.premium-header {
+.app-topstrip {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 8;
+  z-index: 12;
+  background: linear-gradient(90deg, #001138 0%, #001E66 100%);
 
-  .hover-link {
-    opacity: 0.8;
+  @include media-breakpoint-down(lg) {
+    top: 72px;
+  }
+
+  .text-linear-gradient {
+    font-size: 14px !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FFFFFF 0%, #3772FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .border-opacity-40 {
+    --bs-border-opacity: 0.4;
+  }
+
+  .live-preview-drop {
+    font-size: 16px !important;
+    border-radius: 4px !important;
+
+    &:hover,
+    &:active {
+      background-color: #3772FF;
+    }
+
+    &.show {
+      background-color: #3772FF;
+    }
+  }
+
+  .get-pro-btn {
+    font-size: 16px !important;
+    border-radius: 4px !important;
+    background-color: #3772FF;
 
     &:hover {
-      opacity: 1;
+      background-color: #5D87FF;
+    }
+  }
+
+  .link-hover {
+    font-size: 16px !important;
+
+    iconify-icon {
+      font-size: 20px !important;
+    }
+
+    &:hover {
+      color: #5D87FF !important;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 280px;
+    box-shadow: 0px 2px 8px rgba(99, 99, 99, 0.12);
+
+    .dropdown-item {
+      font-size: 16px;
+      color: #000C29;
+      padding: 12px 18px;
+
+      &:hover {
+        background: rgba(0, 12, 41, 0.05);
+      }
     }
   }
 }
 
-@include media-breakpoint-down(lg) {
-  .premium-header {
-    top: 61px;
-  }
-}
-
-.btn-gredient {
-  border: 0;
-  background: linear-gradient(94deg, #9f8be9 0, #e577ac 53.08%, #ed7853 97.99%), rgba(255, 255, 255, .05);
-
-  &:hover {
-    background: linear-gradient(90deg, #ed7853 0, #e577ac 53.08%, #9f8be9 97.99%);
-  }
-}
 
 
 .docs {
@@ -35,10 +83,14 @@
     display: flex;
     align-items: stretch;
     font-size: 16px;
-    margin-top: 73px;
+    margin-top: 72px;
 
     @include media-breakpoint-down(lg) {
-      margin-top: 150px;
+      margin-top: 165px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 115px;
     }
   }
 
@@ -185,10 +237,6 @@
     margin-bottom: 20px;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   pre {
     display: grid;
     margin: 15px 0 0;
@@ -197,6 +245,10 @@
       border-radius: $border-radius-md;
     }
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 @include media-breakpoint-down(lg) {
