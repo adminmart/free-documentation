@@ -411,23 +411,38 @@
                       <h4 class="card-title">Change Logo</h4>
                       <h5 class="card-subtitle mt-2 text-muted mb-4">
                         To change logo :
-                        <span class="text-dark font-medium">package/demos/src/main/partials/logo-sidebar.html</span>
+                        <span class="text-dark font-medium">To change logo : package/demos/src/main/partials/logo-sidebar.html</span>
                       </h5>
                       <div class="border-2 border-start border-primary bg-light rounded p-3">
                         Put the logo image into the assets/images/logos folder.
                       </div>
                       <pre>
                         <code class="language-js py-0">
-&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"brand-logo d-flex align-items-center justify-content-between"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../main/index.html"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-nowrap logo-img"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../assets/images/logos/dark-logo.svg"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dark-logo"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Logo-Dark"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../assets/images/logos/light-logo.svg"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"light-logo"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Logo-light"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ti ti-x"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                            </span>
+&#x3C;div class=&#x22;brand-logo flex  items-center &#x22;&#x3E;
+  &#x3C;a href=&#x22;@@webRoot/main/index.html&#x22; class=&#x22;text-nowrap logo-img&#x22;&#x3E;
+    &#x3C;img
+      src=&#x22;@@webRoot/assets/images/logos/dark-logo.svg&#x22;
+      class=&#x22;dark:hidden block rtl:hidden !w-fit&#x22;
+      alt=&#x22;Logo-Dark&#x22;
+    /&#x3E;
+    &#x3C;img
+      src=&#x22;@@webRoot/assets/images/logos/light-logo.svg&#x22;
+      class=&#x22;dark:block hidden rtl:hidden rtl:dark:hidden !w-fit&#x22;
+      alt=&#x22;Logo-light&#x22;
+    /&#x3E;
+    
+    &#x3C;img
+      src=&#x22;@@webRoot/assets/images/logos/dark-logo-rtl.svg&#x22;
+      class=&#x22;dark:hidden hidden rtl:block rtl:dark:hidden !w-fit&#x22;
+      alt=&#x22;Logo-Dark&#x22;
+    /&#x3E;
+    &#x3C;img
+      src=&#x22;@@webRoot/assets/images/logos/light-logo-rtl.svg&#x22;
+      class=&#x22;dark:hidden hidden rtl:hidden rtl:dark:block !w-fit&#x22;
+      alt=&#x22;Logo-light&#x22;
+    /&#x3E;
+  &#x3C;/a&#x3E;
+&#x3C;/div&#x3E;
                           </code>
                                 </pre>
                     </div>
@@ -443,22 +458,19 @@
                       <h4 class="card-title">Change Logo</h4>
                       <h5 class="card-subtitle mt-2 text-muted mb-4">
                         To change logo :
-                        <span class="text-dark font-medium">src/html/*.html</span>
+                        <span class="text-dark font-medium">src/partials/logo-sidebar.html</span>
                       </h5>
                       <div class="border-2 border-start border-primary bg-light rounded p-3">
                         Put the logo image into the assets/images/logos folder.
                       </div>
                       <pre>
                         <code class="language-js py-0">
-&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"brand-logo d-flex align-items-center justify-content-between"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../main/index.html"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-nowrap logo-img"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../assets/images/logos/logo.svg"</span> <span class="hljs-attr"><span class="hljs-attr">alt</span>=<span class="hljs-string">"Logo"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:void(0)"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ti ti-x"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                            </span>
+&#x3C;a href=&#x22;../&#x22; class=&#x22;text-nowrap&#x22;&#x3E;
+  &#x3C;img
+    src=&#x22;@@webRoot/assets/images/logos/dark-logo.svg&#x22;
+    alt=&#x22;Logo-Dark&#x22;
+  /&#x3E;
+&#x3C;/a&#x3E;
                                                     </code>
                                 </pre>
                     </div>

@@ -408,59 +408,39 @@
                 <div class="p-3">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Override Colors</h4>
+                      <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
                       <h5 class="card-subtitle mt-2 text-muted mb-4">
                         For any change in colors :
                         <span
-                          class="text-dark font-medium">package/demos/src/assets/scss/variables/_variables.scss</span>
+                          class="text-dark font-medium">package/main/src/assets/tailwind/utilities/default_theme.css</span>
                       </h5>
                       <pre>
                             <code class="language-js py-0">
-// colors
-$white: #fff !default;
-$gray-100: #f6f9fc !default;
-$gray-200: #eaeff4 !default;
-$gray-300: #dfe5ef !default;
-$gray-400: #7c8fac !default;
-$gray-500: #5a6a85 !default;
-$gray-600: #2a3547 !default;
-$black: #000 !default;
-
-// Color
-$blue: #5d87ff !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #d63384 !default;
-$red: #fa896b !default;
-$orange: #fd7e14 !default;
-$yellow: #ffae1f !default;
-$green: #13deb9 !default;
-$teal: #20c997 !default;
-$cyan: #539bff !default;
-
-// Main Colors
-$primary: $blue !default;
-$secondary: #49beff !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$muted: $gray-500 !default;
-$dark: $gray-600 !default;
-$dark-light: $gray-600 !default;
-$light-gray: $gray-100 !default;
-$light-indigo: #ebf3fe;
-
-// light colors
-$primary-bg-subtle: #ecf2ff !default;
-$secondary-bg-subtle: #e8f7ff !default;
-$success-bg-subtle: #e6fffa !default;
-$info-bg-subtle: #ebf3fe !default;
-$warning-bg-subtle: #fef5e5 !default;
-$danger-bg-subtle: #fbf2ef !default;
-$light-bg-subtle: $gray-100 !default;
-$dark-bg-subtle: $gray-600 !default;
+--info: oklch(68.98% 0.165 257.10);
+--success: oklch(80.48% 0.150 174.63);
+--warning: oklch(80.94% 0.165 74.03);
+--error: oklch(74.75% 0.144 35.82);
+--lightsuccess: oklch(98.05% 0.027 182.42);
+--lighterror: oklch(95.74% 0.019 38.15);
+--lightinfo: oklch(96.13% 0.017 256.28);
+--lightwarning: oklch(97.29% 0.023 82.12);
+--darkinfo: oklch(34.05% 0.082 264.13);
+--darksuccess: oklch(33.68% 0.044 224.24);
+--darkwarning: oklch(36.49% 0.037 61.35);
+--darkerror: oklch(34.83% 0.042 350.24);
+--white: oklch(100.00% 0.000 0);
+--dark: oklch(27.84% 0.027 257.53);
+--border: oklch(95.50% 0.009 242.84);
+--bordergray: oklch(92.03% 0.015 260.73);
+--darkborder: oklch(36.67% 0.041 262.29);
+--link: oklch(32.70% 0.035 260.11);
+--bodytext: oklch(52.16% 0.047 260.80);
+--darklink: oklch(64.54% 0.049 258.74);
+--lightgray: oklch(98.07% 0.005 247.88);
+--darkgray: oklch(45.04% 0.047 259.98);
+--error-emphasis: oklch(66.29% 0.128 35.43);
+--warning-emphasis: oklch(71.77% 0.146 74.27);
+--success-emphasis: oklch(71.35% 0.133 174.50);
 
                                     </code>
                                 </pre>
@@ -474,55 +454,23 @@ $dark-bg-subtle: $gray-600 !default;
                 <div class="p-3">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Override Colors (Light / Dark Theme)</h4>
+                      <h4 class="card-title">Override Colors</h4>
                       <h5 class="card-subtitle mt-2 text-muted mb-4">
                         For any change in colors :
-                        <span class="text-dark font-medium">src/assets/scss/variables/_variables.scss</span>
+                        <span class="text-dark font-medium">src/assets/tailwind/tailwind.css</span>
                       </h5>
                       <pre>
                             <code class="language-js py-0">
-$white: #fff !default;
-$gray-100: #F6F9FC !default;
-$gray-200: #EAEFF4 !default;
-$gray-300: #DFE5EF !default;
-$gray-400: #7C8FAC !default;
-$gray-500: #5A6A85 !default;
-$gray-600: #2A3547 !default;
-$black: #000 !default;
-
-// Color
-$blue: #5D87FF !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #d63384 !default;
-$red: #FA896B !default;
-$orange: #fd7e14 !default;
-$yellow: #FFAE1F !default;
-$green: #13DEB9 !default;
-$teal: #20c997 !default;
-$cyan: #539BFF !default;
-
-// Main Colors
-$primary: $blue !default;
-$secondary: #49BEFF !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$muted: $gray-500 !default;
-$dark: $gray-600 !default;
-$dark-light: $gray-600 !default;
-$light-gray: $gray-100 !default;
-
-// light colors
-$light-primary: #ECF2FF;
-$light-secondary: #E8F7FF;
-$light-info: #EBF3FE;
-$light-success: #E6FFFA;
-$light-warning: #FEF5E5;
-$light-danger: #FBF2EF;
-$light-indigo: #EBF3FE;                      
+@theme {
+  /* Default colors */
+  --color-primary: oklch(65.33% 0.184 266.79);
+  --color-secondary: oklch(76.32% 0.139 237.20);
+  --color-info: oklch(68.98% 0.165 257.10);
+  --color-success: oklch(80.48% 0.150 174.63);
+  --color-warning: oklch(80.94% 0.165 74.03);
+  --color-error: oklch(74.75% 0.144 35.82);
+  --color-dark: oklch(27.84% 0.027 257.53);
+}                     
                                   </code>
                                 </pre>
                     </div>

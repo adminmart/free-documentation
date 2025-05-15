@@ -386,19 +386,22 @@
             <div class="mt-4 card">
               <div class="card-body">
                 <h4 class="card-title">Google fonts</h4>
-                <h5 class="card-subtitle mt-2 text-muted">1) Change the google fonts link as per your choice : <span
-                    class="text-dark font-medium">src/assets/scss/styles.scss</span></h5>
+                <h5 class="card-subtitle mt-2 text-muted">1) Add Font family Link : <span
+                    class="text-dark font-medium">src/partials/head.html</span></h5>
                 <pre>
                         <code class="language-html py-0">
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+// Font URL                        
+&#x3C;link href=&#x22;https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&#x26;display=swap&#x22;rel=&#x22;stylesheet&#x22; /&#x3E;
                         </code>
                     </pre>
-                <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span
-                    class="text-dark font-medium">src/assets/scss/variables/_variables.scss</span></h5>
+                <h5 class="card-subtitle mt-4 text-muted">2) Call Font family : <span
+                    class="text-dark font-medium">src/assets/tailwind/tailwind.css</span></h5>
                 <pre>
                         <code class="language-js py-0">
-// Font Family
-$font-family-sans-serif: "Plus Jakarta Sans", sans-serif !default;
+:root {
+    --font-*: initial;
+    --font-sans: Plus Jakarta Sans, sans-serif;
+}
                         </code>
                     </pre>
 
